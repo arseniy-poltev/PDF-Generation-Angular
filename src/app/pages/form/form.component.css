@@ -1,0 +1,42 @@
+.table-bordered {
+    margin-bottom: 0px;
+    font-family: "Times New Roman", fantasy;
+}
+
+.table-bordered td {
+    border: 1px solid black;
+    border-top: none;
+    padding: 3px;
+    font-size: 13px;
+}
+
+.form-info-input {
+    border: none;
+    background-color: #dde4ff;
+    width: 100%;
+    font-size: 17px;
+}
+
+.table-bordered th {
+    background-color: #c0c0c0;
+    border: 1px solid black;
+    padding: 4px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.table-bordered span {
+    font-size: 14px;
+}
+
+.table-bordered .mt-radio {
+    margin: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}

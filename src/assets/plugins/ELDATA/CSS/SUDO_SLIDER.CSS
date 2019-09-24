@@ -1,0 +1,93 @@
+/* Sudo Slider */
+
+/* // Sudo Slider */
+/* Numeric Navigation */
+#slider #sudo_slider_wrapper{
+
+}
+#slider #sudo_slider_wrapper img{
+
+}
+#sudo_slider_wrapper .container{
+	padding:0px!important;
+}
+.slider_wrap{
+	
+}
+#sudo_slider_wrapper ul{
+	margin-left:0px;
+	z-index:0;
+	margin-bottom:0px;
+}
+#sudo_slider_wrapper{
+	position:relative;
+	width:auto;
+}
+.slider_wrap img{
+display:block;
+margin:0px auto;
+}
+.caption {
+	bottom: 50%;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+	margin-bottom:-6%;
+}
+
+.caption  h3{
+	border: 3px solid #FFFFFF;
+    color: #FFFFFF;
+    display: table;
+    font-size: 6em;
+    margin: 0 auto;
+    padding: 30px;
+}
+.caption  p{
+	color:#FFF;
+	font-size:1.5em;
+	padding:20px;
+	display: table;
+	text-shadow:1px 1px #555;
+	margin: 0 auto;
+	
+}
+.prevBtn, .nextBtn{
+	background-color:#f95355;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow:0 1px 10px 1px #F95355 inset, 0 2px 0 #974748, 0 0px 0 #974748, 0 0px 0px 0px #974748;
+	}
+.prevBtn, .nextBtn {
+	display:block;
+	width:30px;
+	height:30px;
+	position:absolute;
+	left:3.5%;
+	top:50%;
+	z-index:1000;
+	background:url(../images/prev.png) no-repeat center center;
+	cursor:pointer; 
+	margin-left:15px; 
+	padding:10px;
+	margin-top:-15px!important;
+}	
+ol {margin:1em 0;padding:0;height:28px;	
+}
+ol li{margin:0 10px 0 0; padding:0;float:left;list-style:none;height:28px;line-height:28px;}
+ol li a{float:left;height:28px;line-height:28px;border:1px solid #ccc;background:#DAF3F8;color:#555;padding:0 10px;text-decoration:none;}
+ol li.current a{background:#5DC9E1;color:#fff;}
+ol li a:focus, .prevBtn a:focus, .nextBtn a:focus{outline:none;}
+
+.graphic, .prevBtn, .nextBtn{margin:0;padding:0;display:block;overflow:hidden;text-indent:-8000px;}
+
+.nextBtn{left:95%; margin-left:-5%;  }														
+.nextBtn {background:url(../images/next.png) no-repeat center center; }	
+pre {white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; }
+span#controls{
+display:none;
+}
+.aq-block-aq_slider_block  .caption{
+	 margin: 0 auto -18%;
+}

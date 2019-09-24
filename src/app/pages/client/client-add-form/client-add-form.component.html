@@ -1,0 +1,82 @@
+<div class="page-container">
+  <div class="page-content-wrapper">
+    <div class="page-content">
+      <div class="container">
+        <div class="page-content-inner" *ngIf="client_id">
+          <!-- BEGIN EXAMPLE TABLE PORTLET-->
+          <div class="portlet light">
+            <div class="portlet-title">
+              <div class="caption font-dark-sunglo">
+                <img src="/assets/common/img/icons/docs.svg" class="img-icon" />&nbsp;
+                <span class="caption-subject bold uppercase">
+                  Select forms to add<span *ngIf="client != null"> - {{ client.first_name }} {{ client.last_name }}</span>
+                </span>
+              </div>
+              <div class="inputs">
+                <a [routerLink]="['/pages/client/finish/' + client_id]" class="btn btn-default" title="Forms">
+                  <i class="icon-docs"></i> Forms
+                </a>
+              </div>
+            </div>
+            <div class="portlet-body">
+              <div class="page-content-inner">
+                <div class="blog-page blog-content-1">
+                  <div class="page-title">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <span class="caption-subject font-blue-madison">Completed forms</span>
+                        <label class="mt-checkbox pull-right">
+                          <input type="checkbox" id="allSelectCheckbox" (change)="checkAllSelectChanged()"> Select All
+                          <span></span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <app-form-cell *ngFor="let selected_form of selected_forms" [form]="selected_form"
+                                     (onCheckChanged)="checkChanged()"></app-form-cell>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="pull-right">
+                          <button id="deleteDocsButton" class="btn red disabled" (click)="deleteDocs()">
+                            <i class="fa fa-trash"></i> Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <span class="caption-subject font-blue-madison">Not completed</span>
+                        <label class="mt-checkbox pull-right">
+                          <input type="checkbox" id="allAddCheckbox" (change)="checkAllAddChanged()"> Select All
+                          <span></span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <app-form-cell *ngFor="let form of unselected_forms" [form]="form"
+                                     (onCheckChanged)="checkChanged()"></app-form-cell>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="pull-right">
+                          <button id="addDocsButton" class="btn blue disabled" (click)="addDocs()">
+                            <i class="fa fa-plus"></i> Add
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="portlet light bordered verify-container">
+    <div class="portlet-title">
+      <div class="caption font-dark-sunglo">
+        <i class="fa fa-user-plus font-dark-sunglo"></i>
+        <span class="caption-subject bold uppercase">Register Verify</span>
+      </div>
+    </div>
+    <form class="portlet-body form" action="/" (submit)="verify($event)">
+      <div class="verify-item">
+        Please enter your password:
+      </div>
+      <div class="verify-item">
+        <input id="passwordInput" class="form-control" type="password" name="password" [(ngModel)]="password" required>
+      </div>
+      <div class="verify-item" style="text-align: center">
+        <button type="submit" class="btn blue verify-button">
+          <i class="fa fa-unlock-alt"></i>&nbsp;&nbsp;Verify
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

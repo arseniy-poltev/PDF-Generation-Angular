@@ -1,0 +1,422 @@
+.form-cell {
+  font-size: 18px;
+  font-family: "Times New Roman", serif !important;
+  color: black;
+}
+
+.form-cell * {
+  font-family: "Times New Roman", serif !important;
+}
+
+.page-break {
+  page-break-after: always;
+}
+
+.page-header-border {
+  border-top: 10px solid black;
+  border-bottom: 1px solid black;
+  height: 16px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.page-footer-border {
+  margin-top: 10px;
+}
+
+.form-container {
+  overflow-x: auto;
+  /* max-height: 650px; */
+  /* padding: 40px 20px; */
+}
+
+/* ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(185, 185, 185);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(120, 120, 120);
+} */
+
+.doc-page-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+}
+
+.input-normal {
+  height: 26px;
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.input-30 {
+  height: 30px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.g28-input-large {
+  height: 38px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.print-checkbox i {
+  font-size: 14px !important;
+  margin-left: 0;
+  padding: 0 2px !important;
+}
+
+.print-checkbox {
+  border: 1px solid black;
+  margin-right: 5px;
+  margin-bottom: 0;
+  width: 19px;
+  height: 19px;
+  vertical-align: top;
+  padding: 2px 0 0 0;
+}
+
+.print-checkbox-container {
+  margin: 0 15px 0 0 !important;
+}
+
+.print-checkbox-label {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+.cell-input {
+  border: none;
+  background-color: #dde4ff91;
+  width: 100%;
+  font-size: 17px;
+}
+
+.print-input {
+  min-height: 20px;
+}
+
+.padding-0,
+table.padding-0 td {
+  padding: 0px;
+}
+
+.padding-3,
+table.padding-3 td {
+  padding: 3px;
+}
+
+.padding-5,
+table.padding-5 td {
+  padding: 5px;
+}
+
+.padding-10,
+table.padding-10 td {
+  padding: 10px;
+}
+
+.padding-15,
+table.padding-15 td {
+  padding: 15px;
+}
+
+p {
+  margin: 0px;
+}
+
+.border-top {
+  border-top: 1px solid black;
+}
+
+.border-right {
+  border-right: 1px solid black;
+}
+
+.border-bottom {
+  border-bottom: 1px solid black;
+}
+
+.border-left {
+  border-left: 1px solid black;
+}
+
+.margin-bottom-0,
+.margin-bottom-0 .mt-radio,
+.margin-bottom-0 .mt-checkbox {
+  margin-bottom: 0;
+}
+
+.margin-bottom-2,
+.margin-bottom-2 .mt-radio,
+.margin-bottom-2 .mt-checkbox {
+  margin-bottom: 2px;
+}
+
+.form-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.form-table-bordered td {
+  border: 1px solid black;
+}
+
+.part-header {
+  width: 100%;
+  border: 1px solid black;
+  font-weight: bold;
+  background: lightgrey;
+  font-size: x-large !important;
+}
+
+.part-header * {
+  font-size: x-large !important;
+}
+
+.part-header-no-border {
+  width: 100%;
+  font-weight: bold;
+  background: lightgrey;
+  padding: 5px;
+  font-size: x-large !important;
+}
+
+.part-header-no-border * {
+  font-size: x-large !important;
+}
+
+.g28-size-normal {
+  font-size: 20px !important;
+}
+
+.g28-size-normal * {
+  font-size: 20px !important;
+}
+
+.size-normal {
+  font-size: 18px !important;
+}
+
+.size-normal * {
+  font-size: 18px !important;
+}
+
+.n400-size-normal * {
+  font-size: 20px !important;
+}
+
+.n400-size-normal {
+  font-size: 20px !important;
+}
+
+.n400-part-header {
+  width: 100%;
+  border: 1px solid black;
+  font-weight: bold;
+  background: lightgrey;
+  padding: 5px;
+  font-size: x-large !important;
+}
+
+.n400-part-header * {
+  font-size: x-large !important;
+}
+
+.n400-input-35 {
+  height: 40px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.n400-part-italy {
+  width: 100%;
+  font-weight: bold;
+  font-style: italic;
+  background: lightgrey;
+  padding: 5px;
+  font-size: x-large !important;
+}
+
+.n400-part-italy * {
+  font-size: x-large !important;
+}
+
+.eoir42a-medium * {
+  font-size: 25px !important;
+}
+
+.eoir42a-normal * {
+  font-size: 22px !important;
+}
+
+.eoir42a-small * {
+  font-size: 18px !important;
+}
+
+.eoir42a-input-normal {
+  height: 31px !important;
+  padding-top: 3px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.eoir42a-input-small {
+  height: 24px !important;
+  padding-top: 2px !important;
+  padding-left: 3px !important;
+  padding-right: 3px !important;
+}
+
+.eoir33bia-size-22 {
+  font-size: 21px !important;
+}
+
+.eoir33bia-size-22 * {
+  font-size: 21px !important;
+}
+
+.eoir33bia-size-24 {
+  font-size: 24px !important;
+}
+
+.eoir33bia-size-24 * {
+  font-size: 24px !important;
+}
+
+.part-header td {
+  padding: 5px;
+}
+
+.margin-top-5 {
+  margin-top: 5px;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.block {
+  border-bottom: 1px solid lightgrey;
+  font-size: 20px;
+  font-weight: bold;
+  color: #303030;
+}
+
+.label-grey {
+  color: #191919;
+}
+
+.panel_body {
+  padding: 20px 40px;
+}
+
+.panel_header {
+  padding: 7px;
+}
+
+.wizard-row {
+  margin-top: 15px;
+}
+
+.wizard-row .form-control {
+  border: 1px solid lightgrey !important;
+}
+
+.doc-wrapper .doc-page-content {
+  height: auto;
+}
+
+.doc-page-footer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+}
+
+.wizard-row * {
+  font-size: 14px !important;
+}
+
+.print-check label span {
+  background: none;
+  border: 1px solid black;
+}
+
+.print-check label input:checked~span,
+.print-check label input:checked~span:after {
+  background: none;
+}
+
+.print-radio-circle {
+  font-size: 60px !important;
+  margin-top: 4px !important;
+  margin-left: 4px;
+  vertical-align: top;
+  width: 9px;
+  height: 9px;
+}
+
+.eoir42b-medium * {
+  font-size: 24px !important;
+}
+
+.eoir42b-normal * {
+  font-size: 22px !important;
+}
+
+.eoir42b-small * {
+  font-size: 18px !important;
+}
+
+.eoir42b-input-normal {
+  height: 31px !important;
+  padding-top: 3px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.eoir42b-input-small {
+  height: 24px !important;
+  padding-top: 2px !important;
+  padding-left: 3px !important;
+  padding-right: 3px !important;
+}
+
+.i485-input-medium {
+  height: 38px !important;
+  padding-top: 3px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.i485-small * {
+  font-size: 18px !important;
+}
+
+.create-client-body {
+  margin-top: -10px;
+  padding: 0 15px;
+}

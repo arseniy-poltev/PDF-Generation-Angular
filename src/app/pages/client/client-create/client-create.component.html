@@ -1,0 +1,38 @@
+<div class="page-container">
+  <!-- BEGIN CONTENT -->
+  <div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <!-- BEGIN PAGE CONTENT BODY -->
+    <div class="page-content">
+      <div class="container">
+        <!-- BEGIN PAGE CONTENT INNER -->
+        <div class="page-content-inner">
+          <div class="portlet light " id="form_wizard_1">
+            <div class="portlet-title">
+              <div class="row">
+                <div class="col-md-3 margin-bottom-5" style="margin-top: 6px;">
+                  <div class="caption font-dark-sunglo">
+                    <img src="/assets/common/img/icons/client-create.png" class="img-icon" />&nbsp;
+                    <span class="caption-subject bold uppercase">Create a Client</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portlet-body form">
+              <div>
+                <app-form-doc [form_wizard]="true"></app-form-doc>
+                <div id="createButtonContainer" class="text-center" style="margin: -10px 10px 15px 10px; display: none;">
+                  <button class="btn pink wide" (click)="submitDoc()">Create</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END PAGE CONTENT INNER -->
+      </div>
+    </div>
+    <!-- END PAGE CONTENT BODY -->
+    <!-- END CONTENT BODY -->
+  </div>
+  <!-- END CONTENT -->
+</div>

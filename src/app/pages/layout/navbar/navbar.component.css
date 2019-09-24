@@ -1,0 +1,82 @@
+.menu-avatar {
+  margin-top: -6px;
+}
+
+.menu-avatar img {
+  margin-top: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50% !important;
+}
+
+.navbar {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+  background: white;
+  border-top: none;
+  border-bottom: none;
+}
+
+.nav > li > a {
+  padding: 18px 15px !important;
+  /* font-size: 16px; */
+  color: #242424;
+}
+
+.nav > li > ul > li.active > a {
+  border-left: 2px solid #0092e6;
+}
+
+.nav .dropdown-menu {
+  border: none;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.navbar-header {
+  margin: 0 15px 0 5px;
+  padding-bottom: 10px;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.nav {
+  margin-top: 0px;
+  /*height: 54px;*/
+}
+
+.navbar-brand {
+  margin-top: -5px;
+}
+
+.dropdown > .dropdown-menu:before, .dropdown > .dropdown-menu:after {
+  content: initial;
+}
+
+.navbar-nav > .active > a {
+  color: #0577be !important;
+  background: none !important;
+  box-shadow: none;
+}
+
+.navbar-nav > li > a {
+  padding-bottom: 25px;
+}
+
+.navbar-default {
+  padding-bottom: 0;
+}
+
+.navbar-right > li.dropdown > a {
+  padding: 18px 10px 5px 10px !important
+}
+
+.navbar-brand>img {
+  margin-top: -5px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

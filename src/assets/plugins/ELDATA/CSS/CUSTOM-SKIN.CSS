@@ -1,0 +1,96 @@
+.promobox, .contentblock0, .searchbox-wrapper button, .readmore-1a:hover, a.readmore:hover, a.readmore:active, .readmore-1a:active, .pagination .current, .pagination span a.current, .filter .active, .back, .skillbar-title, .view-tenth .mask, .blog_single_img .isotope_gallery li, .sub_header_wrapper, .bx-wrapper .bx-controls-direction a:hover, .prevBtn, .nextBtn, .scroll_top, .team_desc a:before, .team_desc a:after {
+	background-color:  #FB4400!important;
+}
+.prevBtn, .nextBtn {
+	box-shadow:0 1px 10px 1px #FB4400inset, 0 2px 0 rgba(0, 0, 0, .5), 0 0px 0 rgba(0, 0, 0, .5), 0 0px 0px 0px rgba(0, 0, 0, .5)!important;
+}
+.searchbox-wrapper button:before {
+	border-color: transparent #FB4400!important;
+}
+.readmore-1 {
+	border: 3px solid #FB4400!important;
+}
+.testimonial {
+	border-top: 8px solid #FB4400!important;
+}
+.filter .active:after {
+	border-top: 5px solid #FB4400!important;
+}
+.vaidate_error {
+	border: 1px solid #FB4400!important;
+}
+ul.menu > li > ul {
+	border-top: 3px solid #FB4400!important;
+}
+.menu > li.current-menu-item > a, .menu > li.current_page_item > a, .menu > ul > li:hover > a, .menu .current_page_ancestor > a, .menu .current-menu-ancestor > a, .menu .current-menu-item > a, .menu ul ul li a:hover,  .promobox .readmore-1a:hover, .promobox .readmore-1a:active, .porfolio_items .readmore-1a:hover, .porfolio_items .readmore-1a:active, #slider .slide-block h3 a:hover, .widget_tag_cloud .tagcloud a:hover, #mid_container span.meta_desc span a:hover, .widget_container a:hover {
+	color:  #FB4400!important;
+}
+
+ul.sub-menu .current_page_item a{
+color:#FB4400!important;
+}
+
+#filter ul li a:hover {
+	color:  #FB4400;
+}
+
+.blog  article h3 a:hover{
+color:  #FB4400!important;
+}
+
+.blog_date {
+	border-bottom:43px solid #FB4400!important;
+}
+.hint:after, [data-hint]:after {
+	background: #FB4400!important;
+}
+.hint--top:before {
+	border-top-color:#FB4400!important;
+}
+.testimonial a:hover {
+	border: 5px solid #FB4400;
+}
+.aq-block-aq_content_block a.icon-box, .aq-block-aq_content_block .icon-box i, .aq-block-aq_content_block .icon-box h3, .item_box h4, .item_box h3, .item_box p, .readmore-1a:hover, a.readmore:hover, a.readmore:active, .readmore-1a:active, .blog_date, .skillbar-title span, .searchbox-wrapper button, .promobox h2, .promobox .readmore, .filter_portfolio .filter .active:hover {
+	color: #ffffff!important;
+}
+.promobox .readmore-1a:hover, .promobox .readmore-1a:active, .porfolio_items .readmore-1a:hover, .porfolio_items .readmore-1a:active {
+	background:  #ffffff!important;
+	border: 3px solid #ffffff!important;
+}
+.promobox .readmore, .porfolio_items .readmore {
+	border: 3px solid #ffffff!important;
+}
+.mask .border_center {
+	border-bottom: 1px solid #ffffff!important;
+}
+.contentblock0 {
+	background:#FB4400!important;
+}
+.contentblock0, .contentblock0 h3, .contentblock0 i {
+	color:#ffffff!important;
+}
+.contentblock0 p {
+	color:#f1f1f1!important;
+}
+.contentblock1 {
+	background:#39A9E0!important;
+}
+.contentblock1 h1, .contentblock1 h2, .contentblock1 h3, .contentblock1 h4, .contentblock1 h5, .contentblock1 h6 {
+	color:#ffffff!important;
+}
+.contentblock1 p {
+	color:#ffffff!important;
+}
+.contentblock2 {
+	background:#FB4400!important;
+}
+.contentblock2 h1, .contentblock2 h2, .contentblock2 h3, .contentblock2 h4, .contentblock2 h5, .contentblock2 h6 {
+	color:#ffffff!important;
+}
+.contentblock2 p {
+	color:#ffffff!important;
+}
+
+#respond span{
+	color:#FB4400!important;
+}

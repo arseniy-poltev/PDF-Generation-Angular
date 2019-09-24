@@ -1,0 +1,53 @@
+<div class="page-container">
+  <div class="page-content-wrapper">
+    <div class="page-content">
+      <div class="container">
+        <div class="page-content-inner">
+          <div class="portlet light">
+            <div class="portlet-title">
+              <div class="caption font-dark-sunglo">
+                <img src="/assets/common/img/icons/lawfirm-license.png" class="img-icon" />&nbsp;
+                <span class="caption-subject bold uppercase">Law Firm License</span>
+              </div>
+            </div>
+            <div class="portlet-body form">
+              <!-- BEGIN FORM-->
+              <form action="#" class="form-horizontal">
+                <div class="lawfirm-license-contents">
+                  <h5>Essential Law Firm Technology Policies and Plans</h5>
+                  <p>They are rogues, far more apt to do what they please than what their employers dictate. Sometimes law firms try to
+                  control their employees with technology. Our favorite example is using technology to ban visits to social media sites.
+                  Employees, after complaining bitterly about their bosses, will simply use their smartphones and go wherever they want
+                  on the Web. Policies that have a dose of common sense can often accomplish more than technology.</p>
+                  <p>Law firms also need plans. What if your firm is sued and you find yourself under a litigation hold? Do you know what
+                  needs doing and who will do it? What if a major earthquake or flood hits and you are suddenly without an office? In a
+                  modern-day nightmare, what happens if you find out that someone has hacked into your law firm servers? What’s the plan,
+                  Stan?</p>
+                  <p>We could write an article on each of the policies we’ve listed below, but space demanded a condensed version to get you
+                  thinking about whether you should be developing policies you don’t have or reviewing those you do have to see if they
+                  need updating. Remember, there are many more policies and plans that law firms should have, but these are some that are
+                  specifically related to technology.</p>
+                  <p>And for heaven’s sake, train, train, train at least once a year. No one remembers the fine points of plans and policies
+                  without annual memory refreshers. At a minimum, technology updates will necessitate minor changes, which will need to
+                  be learned.</p>
+                </div>
+                <div class="form-actions">
+                  <div class="col-md-6 text-left">
+                    <label class="mt-checkbox mt-checkbox-outline">
+                      <input type="checkbox" name="remember" [(ngModel)]="agreed"/> I agree
+                      <span></span>
+                    </label>
+                  </div>
+                  <div class="text-right">
+                    <button type="button" class="btn green wide" [ngClass]="{disabled : !agreed}" (click)="navigate('/pages/lawfirm/create')"> Next </button>
+                  </div>
+                </div>
+              </form>
+              <!-- END FORM-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

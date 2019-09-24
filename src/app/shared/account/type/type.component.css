@@ -1,0 +1,47 @@
+.portlet {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 60px;
+}
+
+.type-box {
+    padding: 10px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
+    border-radius: 5px !important;
+    color: #1f2836;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.type-box:hover {
+    background: rgba(238, 238, 238, 0.178);
+}
+
+.type-box:active {
+    background: rgba(238, 238, 238, 0.548);
+}
+
+.type-box h4 {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.type-box .row {
+    width: 108%;
+}
+
+.fa-long-arrow-right {
+    float: right;
+    margin-top: 28px;
+    font-size: 20px;
+}

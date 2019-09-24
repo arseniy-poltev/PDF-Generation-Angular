@@ -1,0 +1,34 @@
+<div  *ngFor="let doc of docs" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+  <div class="mt-element-ribbon doc-ribbon" [class.not-completed-doc]="type == 'not_completed'">
+    <div>
+      <div class="padding-10">
+        <div class="md-checkbox" style="padding: 0">
+          <input type="checkbox" id="checkbox{{doc.form_id}}" class="md-check" (change)="checkForm(doc)" 
+            [checked]="doc.checked">
+          <label for="checkbox{{doc.form_id}}">
+            <span></span>
+            <span class="check"></span>
+            <span class="box"></span>{{doc.form_type}}</label>
+        </div>
+        <p class="ribbon-content" (click)="checkForm(doc)">{{doc.form_name}}</p>
+      </div>
+      <div *ngIf="type == 'completed'" class="ribbon-action-buttons">
+        <div class="btn-group">
+          <button *ngIf="!(role != 'attorney' && role != 'superadmin' && doc.approved) || (role == 'admin' && doc.form_id == 1)"
+            class="btn btn-default btn-sm"
+            (click)="detail(doc.form_id)" title="Edit">
+            <i class="fa fa-edit"></i>
+          </button>
+          <button class="btn btn-default btn-sm"
+            (click)="preview(doc.form_id)" title="Preview">
+            <i class="fa fa-file-o"></i>
+          </button>
+          <button *ngIf="role == 'attorney' && !doc.approved" class="btn blue btn-sm"
+            (click)="approve(doc.id)" title="Sign">Sign</button>
+          <button *ngIf="role == 'attorney' && doc.approved" class="btn red btn-sm"
+            (click)="dismiss(doc.id)" title="Reject">Reject</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

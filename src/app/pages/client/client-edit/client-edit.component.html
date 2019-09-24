@@ -1,0 +1,64 @@
+<div class="page-container">
+  <!-- BEGIN CONTENT -->
+  <div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <!-- BEGIN PAGE CONTENT BODY -->
+    <div class="page-content">
+      <div class="inner">
+        <!-- BEGIN PAGE CONTENT INNER -->
+        <div class="page-content-inner">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- BEGIN EXAMPLE TABLE PORTLET-->
+              <div class="portlet light">
+                <div class="portlet-title">
+                  <div class="caption font-dark-sunglo">
+                    <i class="icon-user font-dark-sunglo"></i>
+                    <span class="caption-subject bold uppercase">Client Information</span>
+                  </div>
+                </div>
+                <div class="portlet-body form">
+                  <div class="row margin-bottom-10">
+                    <div class="col-sm-3 col-xs-4">
+                      <div class="caption font-dark-sunglo">
+                        <h4>Type : <b>I - 589</b></h4>
+                      </div>
+                    </div>
+                    <div class="col-sm-9 col-xs-8" align="right">
+                      <app-paginator (onPageSelected)="pageSelected($event)"></app-paginator>
+                    </div>
+                  </div>
+                  <div>
+                    <app-form-doc [client_id]="client_id" [form_id]="currentType" [page_index]="currentPage"></app-form-doc>
+                    <p> &nbsp; </p>
+                    <div class="row">
+                      <div class="col-md-8 col-sm-7 sol-xs-12"></div>
+                      <div class="col-md-4 col-sm-5 sol-xs-12">
+                        <div class="row margin-left-20">
+                          <div class="col-xs-4" style="padding-left: 0">
+                          </div>
+                          <div class="col-xs-4" style="padding-left: 0">
+                          </div>
+                          <div class="col-xs-4" style="padding-left: 0">
+                            <a [routerLink]="['/pages/client/detail/' + client_id]" class="btn blue" style="width: 100%">
+                              Submit
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END EXAMPLE TABLE PORTLET-->
+            </div>
+          </div>
+        </div>
+        <!-- END PAGE CONTENT INNER -->
+      </div>
+    </div>
+    <!-- END PAGE CONTENT BODY -->
+    <!-- END CONTENT BODY -->
+  </div>
+  <!-- END CONTENT -->
+</div>

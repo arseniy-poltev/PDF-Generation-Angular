@@ -1,0 +1,88 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['/']">
+        <img src="../../../../assets/common/img/logo-blue.png" height="45">
+      </a>
+    </div>
+    <ul *ngIf="pages" class="nav navbar-nav">
+      <li *ngFor="let page of pages" [class.dropdown]="page.children" [class.active]="page.active"
+          [style.display]="page.align == 'left' && is_show(page) ? '' : 'none'">
+        <a *ngIf="!page.children" (click)="navigate(page.path)">
+          {{ page.title }}
+        </a>
+        <a *ngIf="page.children" class="dropdown-toggle" data-toggle="dropdown">
+          {{ page.title }}
+          <i class="fa fa-angle-down" style="width: 15px"></i>
+        </a>
+        <ul *ngIf="page.children" class="dropdown-menu">
+          <li *ngFor="let child of page.children" [class.active]="child.active"
+              [style.display]="is_show(child) ? '' : 'none'">
+            <a (click)="navigate(child.path)">
+              {{child.title}}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul *ngIf="!user.is_logged()" class="nav navbar-nav navbar-right">
+      <li *ngFor="let page of pages" [class.dropdown]="page.children" [class.active]="page.active"
+          [style.display]="page.align == 'right' && is_show(page) ? '' : 'none'">
+        <a *ngIf="!page.children" (click)="navigate(page.path)" style="padding: 15px 10px 10px 10px !important">
+          <button *ngIf="page.path == '/account/login'" class="btn btn-sm blue btn-outline btn-auth">{{ page.title }}</button>
+          <button *ngIf="page.path == '/account/type'" class="btn btn-sm btn-success btn-auth">{{ page.title }}</button>
+        </a>
+        <a *ngIf="page.children" class="dropdown-toggle" data-toggle="dropdown">
+          {{ page.title }}
+          <i class="fa fa-angle-down" style="width: 15px"></i>
+        </a>
+        <ul *ngIf="page.children" class="dropdown-menu">
+          <li *ngFor="let child of page.children" [class.active]="child.active">
+            <a (click)="navigate(child.path)">
+              {{child.title}}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul *ngIf="user.is_logged() && profile" class="nav navbar-nav navbar-right">
+      <li *ngIf="notifications && notifications.length > 0" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-bell"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li *ngFor="let notification of notifications">
+            <a (click)="readNotification(notification)">
+              {{notification.message}}
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li *ngIf="user.role == 'superadmin'">
+        <a [routerLink]="['/admin/user']">
+          <i class="fa fa-cogs"></i> Admin
+        </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" class="menu-avatar" style="padding: 17px 10px 10px 10px !important">
+          <tr>
+            <td style="padding-right: 5px">
+              <img *ngIf="avatarExist" src="{{profile.avatar}}">
+              <span *ngIf="!avatarExist">
+                <avatar [name]="fullName" [displayType]="circle" size="36" [background]="avatarBackground"></avatar>
+              </span>
+            </td>
+            <td>
+              {{ fullName }}
+            </td>
+          </tr>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a [routerLink]="['/pages/account/profile']">My Profile</a></li>
+          <li><a (click)="logout()">Log Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

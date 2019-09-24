@@ -1,0 +1,132 @@
+/**** Isotope Filtering ****/
+.isotope-item {
+  z-index: 1;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+/**** Isotope CSS3 transitions ****/
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+
+}
+/**** disabling Isotope CSS3 transitions ****/
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+/* disable CSS transitions for containers with infinite scrolling
+------------------------------------------------------*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+/* Isotope styles 
+------------------------------------------------------*/
+#filter ul {
+    list-style: none outside none;
+	position:relative;
+	margin-left:0px;
+	 margin-bottom:30px;
+}
+#filter ul li a	{
+	border: 1px solid #EEEEEE;
+	color: #848484;
+	display: inline-block;
+	font-size: 14px;
+	padding: 6px 15px;
+	border-radius: 2px 2px 2px 2px;
+}
+.filter .active:after{
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:5px solid #FB4400;
+    bottom: -5px;
+    height: 0;
+    left: 50%;
+    position: absolute;
+    width: 0;
+	margin-left:-5px;
+	content:"";
+}
+.filter ul li {
+    display: inline-block;
+	margin-right:5px;
+}
+.filter a {
+    display: block;
+    font-size: 12px;
+}
+.filter  .active {
+	background-color: #F75454;
+    border: 0 none !important;
+    border-radius: 2px 2px 2px 2px !important;
+    color: #FFFFFF !important;
+    position: relative;
+}
+
+/*  Portfolio Columns 
+------------------------------------------------------*/
+.portfolio_extra{
+	width:102.6%;
+	margin-bottom:57px;
+}
+
+ul.portfolio_items{
+	margin-top:15px;
+}
+ul.portfolio_items  li, ul.porfolio_items li, #relatedposts li{
+	display:inline-block;
+	overflow: hidden;
+	margin-right:1.45%;
+	margin-bottom:1.45%;
+
+}
+
+.portfolio4  li, #relatedposts li {
+	width:23.27%;
+}
+.portfolio3  li {
+	width:31.75%;
+}
+
+.portfolio2   li {
+	width:48.4%;
+}
+
+.portfolio_sligleimg{
+	position:relative;
+	overflow:hidden;
+}

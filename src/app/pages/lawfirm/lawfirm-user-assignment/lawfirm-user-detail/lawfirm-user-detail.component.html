@@ -1,0 +1,134 @@
+<div class="page-container">
+  <div class="page-content-wrapper">
+    <div class="page-content">
+      <div class="container">
+        <div class="page-content-inner">
+          <div class="portlet light">
+            <div class="portlet-title">
+              <div class="caption font-dark-sunglo">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td style="padding-right: 5px">
+                        <img *ngIf="avatarExist" src="{{user.profile.avatar}}" class="user-avatar">
+                        <span *ngIf="!avatarExist">
+                          <avatar [name]="fullName" [displayType]="circle" size="36" [background]="avatarBackground"></avatar>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="caption-subject bold">
+                          {{user.profile.first_name + ' ' + user.profile.last_name}}
+                        </span>&nbsp;
+                        <span *ngIf="user.status == 'approved'" class="badge badge-success">Approved</span>
+                        <span *ngIf="user.status != 'approved'" class="badge badge-danger">Dismissed</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="portlet-actions text-right margin-top-10">
+                <button (click)="back()" class="btn grey-salsa btn-outline btn-sm">
+                  Users
+                </button>
+                <button *ngIf="user.status != 'approved'" (click)="onApprove(user.id)" class="btn green btn-sm">
+                  Approve
+                </button>
+                <button *ngIf="user.status == 'approved'" (click)="onDismiss(user.id)" class="btn red btn-sm">
+                  Dismiss
+                </button>
+              </div>
+            </div>
+            <div class="portlet-body form">
+              <form action="#">
+                <div class="row">
+                  <div class="col-md-6">
+                    <!-- BEGIN FORM-->
+                    <div class="form-body">
+                      <div class="form-group">
+                        <label class="control-label">Firm Name</label>
+                        <input type="text" class="form-control" placeholder="Firm Name"
+                               [(ngModel)]="user.profile.first_name" [ngModelOptions]="{standalone: true}" readonly>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last Name"
+                               [(ngModel)]="user.profile.last_name" [ngModelOptions]="{standalone: true}" readonly>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Email Address</label>
+                        <input type="text" class="form-control" placeholder="Email Address" [(ngModel)]="user.email"
+                               [ngModelOptions]="{standalone: true}" readonly>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Phone Number</label>
+                        <input type="text" class="form-control" placeholder="Phone Number"
+                               [(ngModel)]="user.profile.phone" [ngModelOptions]="{standalone: true}" readonly>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Date of Birth</label>
+                        <div class="">
+                          <div class="input-group date date-picker" data-date-format="yyyy-mm-dd" value="1955-01-01">
+                            <input name="birthday" type="text" class="form-control" placeholder="Date of Birth"
+                                   [(ngModel)]="user.profile.birthday" [ngModelOptions]="{standalone: true}" readonly>
+                            <span class="input-group-btn">
+                                <button class="btn default" type="button" readonly><i
+                                    class="fa fa-calendar"></i></button>
+                              </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="margin-bottom-10">
+                        <div class="col-sm-3 margin-top-10">
+                          <div>Gender</div>
+                        </div>
+                        <div class="col-sm-9">
+                          <div class="mt-radio-inline">
+                            <label class="mt-radio">
+                              <input type="radio" name="optionsRadios" id="optionsRadios4" value="male"
+                                     [(ngModel)]="user.profile.gender" [ngModelOptions]="{standalone: true}" disabled>
+                              Male
+                              <span></span>
+                            </label>
+                            <label class="mt-radio">
+                              <input type="radio" name="optionsRadios" id="optionsRadios5" value="female"
+                                     [(ngModel)]="user.profile.gender" [ngModelOptions]="{standalone: true}" disabled>
+                              Female
+                              <span></span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END FORM-->
+                  </div>
+                  <div class="col-md-6">
+                    <!-- BEGIN FORM-->
+                    <div class="form-body">
+                      <div class="form-group">
+                        <label class="control-label">EOIR</label>
+                        <input type="text" class="form-control" placeholder="EOIR" [(ngModel)]="user.profile.EOIR"
+                               [ngModelOptions]="{standalone: true}" readonly>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">State Bar Number</label>
+                        <input type="text" class="form-control" placeholder="State Bar Number"
+                               [(ngModel)]="user.profile.state_bar_number" [ngModelOptions]="{standalone: true}"
+                               readonly>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Law Firm Name</label>
+                        <input id="last-input" type="text" class="form-control" placeholder="Law Firm Name"
+                               [(ngModel)]="user.profile.lawfirm_id" [ngModelOptions]="{standalone: true}" readonly>
+                      </div>
+                    </div>
+                    <!-- END FORM-->
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

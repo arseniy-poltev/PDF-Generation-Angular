@@ -1,0 +1,67 @@
+.photo
+{
+  width: 100%;
+  height: 450px;
+  background-color: #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.splitscreen {
+  width: 500px;
+}
+
+.hero-content {
+  position: relative;
+  display: block;
+  z-index: 10;
+  margin: 100px auto 0;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  color: white;
+}
+
+.video-hero-wrapper {
+  height: 450px;
+}
+
+#video-hero {
+  background-image: url(../../../assets/common/img/banner.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#photoGallery {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  max-width: none;
+}
+
+.experiences {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.entry-content-wrapper {
+  margin-left: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.static_page_contant {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.container {
+  margin-left: auto;
+  margin-right: auto;
+}

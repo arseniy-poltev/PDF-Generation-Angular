@@ -1,0 +1,414 @@
+/* ________________________________________________________________________________________________________________
+
+                                                  @ 4. Blog Section
+   ________________________________________________________________________________________________________________ */
+  .quote_format{
+    background-color: #e0e0e0;
+    font-style: italic;
+    padding: 20px;
+}  
+.sticky{
+    background-color: #dddddd !important;
+    display: block;
+    overflow: hidden;
+    padding: 20px
+}
+#nav-below{
+display: block;
+}
+a.post-edit-link{
+	overflow:hidden;
+	clear:both;
+}
+.meta .post-date div {
+	background-color: #F95355;
+    color: #FFFFFF;
+    font-size: 35px;
+    height: 50px;
+    line-height: 50px;
+    width: 80px;
+}
+.meta .post-date {
+	display: block;
+	text-align:center;
+}
+.meta{
+	border-right:1px solid #ebebeb;
+	display:block;
+	padding-right:20px;
+}
+.post-date span{
+	background-color:#484848;
+	display:block;
+	font-size:16px;
+	padding:10px 0px;
+	color:#fff;
+}
+.blog article:last-child{
+	border-bottom:none;
+	padding-bottom:0px;
+}
+span.meta_info{
+	position:relative;
+	display:block;
+}
+.meta_desc {
+	background-color:#f0f0f0;
+	display: block;
+	left: 0;
+	right:0px;
+	bottom:0px;
+	padding: 10px 0%;
+	margin:0px auto;
+	color: #777 !important;
+}
+.meta_desc span.triangle-bottomleft{
+	padding:0px!important;
+}
+.meta_desc span{
+	padding: 12px 0 10px 45px;
+	font-size: 13px!important;
+}
+
+span.meta_info img {
+    display: block;
+}
+	
+span.author{
+	background-image: url("../images/admin.png");
+	background-position: 10px 8px;
+	background-repeat: no-repeat;
+	border-left: 0 none !important;
+}
+span.category{
+	background-image: url("../images/category_icon.png");
+	background-position: 10px 8px;
+	background-repeat: no-repeat;
+}
+span.comments{
+	background-image: url("../images/comment.png")!important;
+	background-position: 10px 8px;
+	background-repeat: no-repeat;
+	border-right: medium none !important;
+}
+.blog_date {
+   border-bottom: 43px solid #F95355;
+    border-left: 0px solid transparent;
+    border-right: 40px solid transparent;
+    color: #FFFFFF;
+    float: left;
+    font-size: 16px;
+    height: 0;
+    line-height: 45px;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    top: -10px;
+	padding: 0 !important;
+    width: 96px;
+	}
+.blog_exerpt_without_image .readmore{
+	display:table!important;
+}	
+.triangle-bottomleft { 
+  border-bottom: 40px solid #transparent;
+    border-left: 40px solid #7BC1A1;
+    border-top: 40px solid transparent;
+	position:absolute;
+	top:0px;
+}
+.post_wrapper img, .post img{
+display:block;
+}
+span.comments span{
+	padding:0px!important;
+	border:0px!important;
+}
+.content_box{
+	margin-top:10px;
+}
+.blog_exerpt_without_image  span.meta_desc{
+	width:100%;
+}
+
+.blog_exerpt_without_image span.meta_desc 
+{
+	position:relative;
+	margin-bottom:10px;
+}
+span.meta_desc span:last-child{
+	background-image:none;
+}
+#mid_container span.meta_desc span a{
+	color:#555!important;
+}
+span.meta_desc strong{
+	color:#f75454;
+}
+.post:last-child .divider{
+	display:none;
+}
+.recent_post .meta_comment{
+	margin-left:10px;
+	font-style:italic;
+}
+ .recent_post ul {
+margin-left:0px;
+}
+ .recent_post ul li{
+	clear: both;
+	display: block;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+.recent_post p{
+margin-top:5px;
+}
+
+	/* @ comments style
+----------------------------------------------------------------------------------------------------*/
+.commentlist .bypostauthor {}
+#comments {	clear: both;}
+#comments .navigation {
+	padding: 0 0 18px 0;
+}
+h3#comments-title, h3#reply-title {
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 0;
+}
+h3#comments-title {
+	padding: 24px 0;
+}
+.commentlist {
+	list-style: none;
+	margin: 0;
+}
+.commentlist li.comment {
+	margin: 0;
+	position: relative;
+ 	overflow:hidden;	
+
+}
+.commentlist li .description {
+	background-color:#eee;
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    margin: 0 0 24px;
+    overflow: hidden;
+    padding: 20px 15px 20px 20px;
+    position: relative;
+}
+.commentlist li.comment:before{
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid rgba(127, 127, 127, 0.3);
+	border-top: 10px solid transparent;
+	content: "";
+	height: 0;
+	left: 85px;
+	position: absolute;
+	top: 25px;
+	width: 0;
+	z-index:99;
+}
+#comments .comment-body ul, #comments .comment-body ol {
+	margin-bottom: 18px;
+}
+ol.commentlist {
+	margin:0px;
+	padding:0px;
+}
+
+#entry-author-info{
+	background-color:#f0f0f0;
+	padding:15px 15px;
+	overflow:hidden;
+}
+#entry-author-info h4{
+	padding-bottom:6px;
+}
+#author-link{
+	float:right;
+	font-style:italic;
+}
+.comment-author cite {
+	color: #666;
+	font-style: normal;
+	font-weight: bold;
+}
+.comment-author .says {
+	font-style: italic;
+}
+.comment-meta {
+	font-size: 12px;
+	margin: 0 0 10px 0;
+}
+cite.fn{
+	text-align:left;
+}
+.comment-meta a:link, .comment-meta a:visited {
+	text-decoration: none;
+}
+.reply {
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    cursor: pointer;
+    padding:5px 19px;
+	margin:15px 0 15px 0px;
+}
+
+.reply a {
+	color:#777!important;
+}
+.reply a:hover, a.comment-edit-link:hover {
+	color:#999!important;
+}
+#comments .commentmetadata a:hover, #comments .reply a:hover{
+	opacity:.7!important;
+}
+.commentlist .children {
+	list-style: none;
+	margin: 0;
+	margin-top:10px;
+	margin-right:10px;
+	padding:0px;
+	}
+.commentlist .children li {
+	border: medium none;
+	margin: 0 0 0 93px;
+	overflow: hidden;
+	padding: 0;
+}
+.commentlist .children li .children li {
+	border: none;
+	margin: 0;
+	margin: 20px 0 0 35px;
+	overflow:hidden;	
+}
+.nopassword, .nocomments {
+	display: none;
+}
+#comments .pingback {
+	margin-bottom: 18px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #1d1d1d;
+}
+.commentlist li.comment+li.pingback {
+	margin-top: -6px;
+}
+#comments .pingback p {
+	color: #888;
+	font-size: 12px;
+	display:block;
+	margin: 0;
+}
+#comments .pingback .url {
+	font-style: italic;
+	font-size: 13px;
+}
+/* comments Form
+-----------------------------------*/
+input[type=submit] {
+}
+#respond {
+	margin: 20px 0 0px 0px;
+	overflow: hidden;
+	position: relative;
+	clear:both;
+	border-top: 3px solid rgba(127, 127, 127, 0.3);
+}
+#respond p {
+	margin: 0;
+}
+#respond .comment-notes {
+	margin-bottom: 1em;
+}
+.form-allowed-tags {
+	line-height: 1em;
+	margin:5px 0!important;
+}
+.children #respond {
+	margin: 0 48px 0 0;
+}
+h3#reply-title {
+	margin: 18px 0;
+}
+#comments-list #respond {
+	margin: 0 0 18px 0;
+}
+#comments-list ul #respond {
+	margin: 0;
+}
+#cancel-comment-reply-link {
+	font-size: 12px;
+	font-weight: normal;
+}
+#respond span{
+color:red;
+}
+#respond textarea{
+width:97%.4!important;
+}
+#respond input {
+display:block;
+}
+
+#commentform #submit{
+display:block;
+width:150px !important;
+}
+
+#respond p {
+margin-bottom:0px!important;
+}
+#respond .form-allowed-tags {
+	color: #333;
+	font-size: 12px;
+	line-height: 18px;
+}
+#respond .form-allowed-tags code {
+	font-size: 11px;
+}
+#respond .form-submit {
+	margin: 10px 0 0 0px;
+}
+.avatar {
+	padding:3px;
+	border:1px solid rgba(127,127,127,.3);
+	width:auto;
+	margin-right:20px;
+}
+/* @ Pagination style
+------------------------------------------------*/
+.pagination{
+	clear:both;
+	font-weight:bold;
+	position: relative;
+	bottom:0px;
+	text-align:left;
+	bottom:0px;
+	width:auto;
+	float:left;
+	margin-bottom:30px;
+}
+.pagination a, .pagination a:link, .pagination a:visited {
+	background-color: #333;
+	background-image: url("../images/pagination_bg.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: #fff;
+	display: inline-block;
+	margin: 0 5px;
+	padding: 5px 10px;
+}
+.pagination a:hover {
+	color:#ccc !important;
+} 
+.pagination .current, .pagination  span a.current, ul.page-numbers .current {
+	background-color: #F75454;
+	background-image: url("../images/pagination_bg.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: #fff;
+	display: inline-block;
+	margin: 0 5px;
+	padding: 5px 10px;
+}

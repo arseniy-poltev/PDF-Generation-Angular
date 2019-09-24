@@ -1,0 +1,12 @@
+<div *ngIf="data" class="multi-table">
+  <table *ngFor="let table of data">
+  <tbody>
+    <tr *ngFor="let trow of table" [class.border-top]="trow[0].border">
+      <td *ngFor="let tcell of trow" [style.padding]="tcell.padding" class="{{ tcell.class }}" [width]="tcell.width">
+        <span *ngIf="tcell.display_type == 'label'">{{ tcell.text }} <i>{{ tcell.addition }}</i></span>
+        <input *ngIf="tcell.display_type == 'input'" class="form-info-input" [style.font-size]="tcell.font_size">
+      </td>
+    </tr>
+  </tbody>
+  </table>
+</div>

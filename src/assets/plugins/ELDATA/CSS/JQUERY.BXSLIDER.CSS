@@ -1,0 +1,365 @@
+/**
+ * BxSlider v4.0 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2012
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+#homeslider{
+opacity:0;
+}
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	*zoom: 1;
+
+}
+ul.homeslider{
+position:relative;
+}
+.bx-wrapper img, .homeslider img {
+	display: block;
+	
+}
+.bx-wrapper ul {
+margin-left:0px!important;
+}
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+display: block;
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom:50px;
+	width: 100%;
+}
+
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(../images/ajax-loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager  {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+	z-index: 50;
+	display:none;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: none;
+	*zoom: 1;
+	*display: inline;
+}
+#homeslider .bx-wrapper .bx-pager .bx-pager-item,
+#homeslider .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background-color: #555!important;
+    background-repeat: no-repeat;
+    border-radius: 100% 100% 100% 100%;
+    display: block;
+    height: 15px;
+    margin: 0 5px;
+    outline: 0 none;
+    text-indent: -9999px;
+    width: 15px;
+	border:2px solid #cbcbcb;
+}
+
+ .bx-wrapper .bx-pager.bx-default-pager a:hover,
+ .bx-wrapper .bx-pager.bx-default-pager a.active {
+	
+    background-repeat: no-repeat;
+	background-color:#444445;
+	border:2px solid #cbcbcb;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-next {
+	
+	background-image:url(../images/next.png)!important;
+	background-repeat:no-repeat!important;
+	background-color:rgba(127, 127, 127, 0.6);
+	background-position:center center!important;
+	right:0px
+	
+}
+
+.bx-wrapper .bx-prev {
+	background-image:url(../images/prev.png)!important;
+	background-repeat:no-repeat!important;
+	background-color:rgba(127, 127, 127, 0.6);
+	background-position:center center!important;
+	left:0px;
+	
+}
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	outline: 0;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	z-index: 0;
+	margin-top:-20px;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(../images/controls.html) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(../images/controls.html) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+
+.slider_desc{
+ background-image: url("../images/caption_bg.png");
+    background-repeat: repeat;
+    border-right: 3px solid #FFFFFF;
+    bottom: 150px;
+    left:10%;
+    padding: 20px;
+    position: absolute;
+    width: 400px;
+}
+
+.slider_desc h1{
+color:#fff;
+margin-bottom:0px;
+padding:10px 20px;
+}
+
+.slider_desc p{
+color:#fff;
+margin-bottom:0px;
+padding:10px 20px;
+}
+
+.portfolio_post_slider
+{
+	position:relative;
+	margin-bottom: 60px;
+	display:block;
+	z-index:9;
+	clear:both;
+}
+
+.portfolio_post_slider .bx-wrapper .bx-prev,
+.testimonial_wrap .bx-wrapper .bx-prev {
+  background-image: url("../images/prev.png") !important;
+    background-position: 9px center !important;
+    background-repeat: no-repeat !important;
+    right: 31px !important;
+	
+	
+}
+.bx-controls-direction{
+    height: 26px;
+    position: absolute;
+    right: 0;
+    top: -62px;
+    width: 75px;
+}
+.portfolio_post_slider .bx-wrapper .bx-next,
+.testimonial_wrap .bx-wrapper .bx-next {
+	background-image:url(../images/next.png)!important;
+	background-repeat:no-repeat!important;
+	background-position:10px center!important;
+	
+}
+.portfolio_post_slider .bx-prev, .testimonial_wrap  .bx-prev{
+   border-right: 1px solid #999999;
+    left: 22px !important;
+}
+.bx-wrapper .bx-prev:hover, .bx-wrapper .bx-next:hover  {
+		background-color:#F75454;
+	}
+
+.portfolio_post_slider .bx-wrapper .bx-controls-direction a,
+.testimonial_wrap .bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top:0px;
+	outline: 0;
+	width: 26px;
+	height: 26px;
+	text-indent: -9999px;
+	z-index: 0;
+	background-color:#bbb;
+}
+.style1 .testimonial_img{
+width:60px;
+height:60px;
+margin-right:130px;
+float:right;
+}
+.testimonial_wrap{
+position:relative;
+}
+.top_arrow{
+   background-image: url("../images/testimonial_top_border.html");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 8px;
+    width: 308px;
+	float:right;
+	clear:both;
+	margin-bottom:15px;
+
+}
+
+.testimonial_img img{
+-webkit-border-radius: 60px; 
+width:60px;
+height:60px;
+border-radius:60px; 
+
+}
+.testimonial_wrap .thumb_img img{
+border-radius:100%;
+border:3px solid #DDDDDD;
+
+}
+.testimonial_wrap .testimonial_quotes{
+position:absolute;
+right:0px;
+}
+.testimonial_wrap .description{
+    display: table;
+    position: relative;
+}
+.testimonial_wrap .style2{
+border-left:0px!important;
+}
+.style2 .testimonial_img{
+position:relative;
+}
+.testimonial_wrap li{
+margin-bottom:30px;
+}
+/* Portfolio Single Slider */
+.blog_single_img .bx-controls-direction, #homeslider .bx-controls-direction{
+ background:none!important;
+    position: absolute;
+    top:50%!important;
+    }
+.blog_single_img .bx-controls-direction, #homeslider .bx-controls-direction{
+    top:50%!important;
+	width:100%!important;
+	 margin-top: -20px;
+	  z-index: 1;
+	}
+
+/* Portfolio Single page */
+
+.blog_single_img .bx-prev{
+left:0px !important;
+}
+
+  #kaya_portfolio_slider .bx-controls-direction {
+  background:none;
+  top:50%!important;
+  }
+  /* Single page Slider */
+#kaya_portfolio_slider .bx-controls-direction {
+  background:none;
+  top:50%!important;
+  width:100%;
+  }
+ 

@@ -1,0 +1,20 @@
+.admin-title {
+  padding: 15px 60px;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(158, 118, 118, 0.12);
+  background: white;
+}
+
+.admin-title h1 {
+  font-size: 18px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.admin-content {
+  padding: 15px 60px 10px 60px;
+}
+
+.admin-title-img {
+  height: 22px !important;
+  vertical-align: text-top;
+}

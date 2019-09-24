@@ -1,0 +1,7 @@
+.about-header {
+    height: 500px;
+    background-image: url(../../../assets/common/img/about.jpg);
+    background-position: center;
+    margin: 0 -20px;
+    background-size: cover;
+}

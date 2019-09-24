@@ -1,0 +1,6 @@
+.preview-form {
+  overflow: auto !important;
+  max-height: 600px !important;
+  width: 100% !important;
+}
+

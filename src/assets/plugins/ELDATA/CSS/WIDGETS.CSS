@@ -1,0 +1,238 @@
+/* Widget Container
+----------------------------------------------------------------------------------------------------*/
+.widget_container{
+	float: left;
+	width:100%;
+    height: auto;
+    text-align: left;
+	overflow:hidden;
+	margin-bottom:40px;
+} 
+/* Contact Infor widget styles
+----------------------------------------------------------------------------------------------------*/
+.widget_contactinfo span#address, .widget_contactinfo span#phone, .widget_contactinfo span#fax, .widget_contactinfo span#email {
+	clear:both;
+	padding:7px 0px;
+	display:block;
+}
+.widget_contactinfo span#address i, .widget_contactinfo span#phone i, .widget_contactinfo span#fax i, .widget_contactinfo span#email i {
+  border: 1px solid #767676;
+    border-radius: 100% 100% 100% 100%;
+    clear: both;
+    color: #767676;
+    display: inline-block;
+    font-size: 13px;
+    height: 17px;
+    line-height: 17px;
+    margin-right: 12px;
+    padding: 2px;
+    text-align: center;
+    width: 17px;
+}
+.widget_contactinfo span strong {
+	clear:both;
+	font-size:13px;
+}
+/* sidebar calander widget styles
+----------------------------------------------------------------------------------------------------*/
+#sidebar .widget_calendar table{
+width:100%;
+}
+#sidebar .widget_calendar table caption{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+#sidebar .widget_calendar table td{
+	text-align:center;
+	padding:5px;
+}
+#sidebar .widget_calendar table td a, #sidebar .widget_calendar table td a:visited{
+	color:#CCCCCC;
+	text-decoration:underline;
+}
+#sidebar .widget_calendar table td a:hover{
+	color:#000;
+	text-decoration:underline;
+}
+#sidebar .widget_calendar table th{
+	background-color:#dedede;
+	padding:5px;
+}
+.widget_container em{
+   display: block;
+    padding-bottom: 5px;
+}
+/* sidebar menu pages
+----------------------------------------------------------------------------------------------------*/
+.widget_pages ul.children{
+margin-left:20px;
+}
+.widget_pages ul.children li:first-child {
+	border-top: 1px solid #E4DFD6;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+/* sidebar mini contact form styles
+----------------------------------------------------------------------------------------------------*/
+.widget_mini_contactform input, .widget_mini_contactform textarea{
+	 float: left;
+    padding: 5px;
+	width:93.1%;
+	border:1px solid #e0e0e0;
+	background-color:#fff;
+}
+.error{
+	clear:both;
+	color:#FF3300;
+	float:left;
+	 display: table;
+}
+.widget_mini_contactform p{
+	display:block;
+	padding-bottom:5px;
+	overflow:hidden;
+}
+.widget_mini_contactform label{
+	display:block;
+}
+#mini_submit{
+    overflow: hidden;
+    padding: 5px 15px;
+    text-align: center;
+	width:auto;
+	cursor:pointer;
+}
+
+/* widget container post stylings
+-------------------------------------------------------------------------------- */
+.widget_container_post_title{
+	margin-bottom:8px;
+}
+.widget_container_post_meta{
+opacity:.5;
+margin-bottom:0px;
+}
+.widget_container_post_content{
+	margin-top:0px;
+	margin-bottom:0px;
+	padding:0px;
+}
+.widget_container_post_date{
+margin-right:10px;
+display:inline-block;
+
+}
+/* Flickr style
+-------------------------------------------------------------------------------- */
+.flickr_widget div img{
+	border: 1px solid #EEEEEE;
+    float: left;
+    height: 60px;
+    margin: 0 7px 7px 0;
+    padding: 5px;
+    text-align: center;
+    width: 60px;
+}
+/*  Globle #sidebar widget style
+---------------------------------------------------------------------------------------------------*/
+.widget_categoryposts ul li a, .widget_recent_comments ul li a,
+.widget_taxpost ul li a, .widget_cat_post_testimonial ul li a,
+.widget_popularposts ul li a, .widget_cat_post_news ul li a, .widget_portfolio_gallery ul li a{
+	background-image: none!important;
+	padding-left:0px!important;
+}
+.page_sidebar .widget_popularposts ul li, .widget_recentposts ul li{
+	margin-bottom:20px!important;
+}
+.widget_title{
+	position: relative;
+    background-color: #ddd;
+	display:block;
+	height:3px;
+	margin-bottom:20px;
+	width:100px;
+	border-bottom:1px dotted #ddd;
+	
+}
+.widget_container ul li{
+	display:table;
+	margin-bottom:10px;
+	width:100%;
+	border-bottom:1px solid rgba(127, 127, 127, 0.1);
+	padding-bottom:10px;
+}
+
+.widget_container:last-child,
+.widget_container ul, .widget_container ul li:last-child, .widget_categoryposts li:last-child
+{
+	margin-bottom:0px!important;
+}
+.widget_container ul{
+	margin-left:0px;
+}
+.widget_container ul li a{
+	background-image:url(../images/arrow-square.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left:20px;
+	color:#666;
+	font-weight:400;
+}
+.widget_taxpost li a img{
+	float:left;
+	display:block;
+	margin-right:20px;
+	margin-bottom:4px;
+}
+
+.taxpost_content{
+	display:block;
+	overflow:hidden;
+}
+
+/* Tag Cloud 
+------------------------------------------------------*/
+.widget_tag_cloud .tagcloud a {
+	background-color:#ffffff;
+    border-radius: 3px 3px 3px 3px;
+    color: #333 !important;
+    display: block;
+    float: left;
+    font-size: 14px !important;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    overflow: hidden;
+    padding: 3px 15px;
+}
+#sidebar  .widget_tag_cloud .tagcloud a{
+	border: 1px solid #e1e1e1;
+}
+.widget_tag_cloud .tagcloud a:hover{
+	color:#F75454;
+}
+.tagcloud{
+	float: left;
+   }
+.widget_portfolio_gallery ul li{
+	width:70px;
+	height:70px;
+	display:inline;
+	border:none!important;
+	margin:0px!important;
+	padding:0px!important;
+}
+.widget_portfolio_gallery ul li a{
+	display: inline-block;
+	float:left;
+	width:70px;
+	height:70px;
+	margin-bottom:10px;
+	margin-right:10px;
+	
+}
+.widget_container ul li  span{
+	font-size:13px;
+}

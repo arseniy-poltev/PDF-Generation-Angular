@@ -1,0 +1,90 @@
+<div class="page-container">
+  <div class="page-content-wrapper">
+    <div class="page-content">
+      <div class="container">
+        <div class="portlet light">
+          <div class="portlet-title">
+            <div class="caption font-dark-sunglo">
+              <img src="/assets/common/img/icons/docs.svg" class="img-icon" />&nbsp;
+              <span class="caption-subject bold uppercase">
+                Forms<span *ngIf="client != null"> - {{client.first_name}} {{client.last_name}}</span>
+              </span>
+            </div>
+            <div class="inputs">
+              <div class="portlet-input">
+                <div class="pull-right">
+                  <button class="btn btn-default" (click)="detail()">
+                    <i class="icon-users"></i> Detail
+                  </button>
+                  <a class="btn btn-default" [routerLink]="['/pages/client/list/']">
+                    <i class="icon-users"></i> Client List
+                  </a>
+                  <a id="savePDFButton" class="btn red disabled" (click)="printForms(0)">
+                    <i class="fa fa-file-pdf-o"></i> Save as PDF
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portlet-body">
+            <div class="profile-info">
+              <ul class="list-inline" *ngIf="client != null">
+                <li>
+                  <i class="fa fa-map-marker"></i>{{client.streetAddress}} {{client.residence_city}}
+                  {{client.residence_street_num}} {{client.residence_apt_num}}
+                </li>
+                <li>
+                  <i class="fa fa-calendar"></i> {{client.birth_date}}
+                </li>
+                <li>
+                  <i class="fa fa-star"></i> {{client.residence_zip_code}}
+                </li>
+                <li>
+                  <i class="fa fa-phone"></i> {{client.residence_telephone_num}}
+                </li>
+              </ul>
+            </div>
+            <div class="margin-bottom-10">
+              <span class="caption-subject font-blue-madison">Completed forms</span>
+            </div>
+            <div class="row">
+              <app-finish-form-widget [client_id]="client_id" [docs]="completed_docs" [type]="'completed'"
+                (onCheckChanged)="checkChanged('', 'completed')" (onApproveChanged)="approveChanged()"></app-finish-form-widget>
+            </div>
+            <div>
+              <div class="text-center">
+                <label class="mt-checkbox" style="margin-right: 15px">
+                  <input type="checkbox" id="completedAllCheckbox" (change)="checkAllChanged('completed')"> Select All
+                  <span></span>
+                </label>
+                <button id="deleteDocsButton" class="btn red disabled" style="width: 120px" (click)="deleteDocs()">
+                  <i class="fa fa-trash-o"></i> Delete
+                </button>
+              </div>
+            </div>
+            <hr/>
+            <div class="margin-bottom-10">
+              <span class="caption-subject font-blue-madison">Not completed</span>
+            </div>
+            <div class="row">
+              <app-finish-form-widget [client_id]="client_id" [docs]="not_completed_docs" [type]="'not_completed'"
+                (onCheckChanged)="checkChanged('', 'not_completed')"></app-finish-form-widget>
+            </div>
+            <div class="text-center margin-bottom-10">
+              <label class="mt-checkbox" style="margin-right: 15px">
+                <input type="checkbox" id="notCompletedAllCheckbox" (change)="checkAllChanged('not_completed')"> Select All
+                <span></span>
+              </label>
+              <button id="addDocsButton" class="btn green disabled" style="width: 120px" (click)="addDocs()">
+                <i class="fa fa-plus"></i> Add
+              </button>
+            </div>
+            <div style="display: none">
+              <app-form-print [form_id]="form_id" [client_id]="client_id" (onPrinted)="printed()"></app-form-print>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

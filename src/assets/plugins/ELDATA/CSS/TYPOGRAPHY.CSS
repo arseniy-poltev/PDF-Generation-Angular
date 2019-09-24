@@ -1,0 +1,421 @@
+/* -------------------------------------------------------------- 
+     reset.css
+   * Resets default browser CSS.
+ -------------------------------------------------------------- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+
+}
+/* style for sticky footer  
+------------------------------------------------------*/
+::selection {
+	background: #ff945f; /* Safari */
+	color:#fff;
+	}
+::-moz-selection {
+	background: #ff945f; /* Firefox */
+	color:#fff;
+}
+
+html, body {height: 100%;}
+
+a {
+    outline: none;
+	text-decoration:none;
+ }
+a img {
+    border:none;
+ }
+
+p, ul, ol, dl, table, fieldset, blockquote, pre, code {
+}
+
+ *|*:focus {
+ outline: none;
+}
+
+a:hover {
+	color:#ff6c00;
+}
+
+/* headings
+------------------------------------------------------*/
+h1, h2, h3, h4, h5, .jqueryslidemenu a, .jqueryslidemenu ul li ul li a {
+	color:#fefefe;
+	
+}
+	
+/* Tables still need 'cellspacing="0"' in the markup. 
+------------------------------------------------------*/
+table { 
+	border-collapse: separate; 
+	border-spacing: 0;
+	text-align:center;
+	border-top:1px solid #ddd;
+	border-left:1px solid #ddd;
+	width:100%;
+}
+caption, th, td { 
+	font-weight: normal;
+	padding:5px;
+}
+table, td, th {
+	vertical-align: middle;
+}
+th{
+	background-color:#eee;
+	padding:10px;
+	font-weight:bold;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #fff;
+	-moz-box-shadow: inset 0 0 3px #ddd;
+	-webkit-box-shadow: inset 0 0 5px #ddd;
+	box-shadow: inner 0 0 3px #ddd;
+	font-size:14px;
+}
+
+td{
+	padding:10px;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+td span{
+	font-style:italic;
+}
+tr:nth-child(odd)    { background-color:#fff; }
+tr:nth-child(even)    { background-color:#f8f8f8; }
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/* Remove annoying border on linked images
+------------------------------------------------------*/
+i
+a img { border: none; }
+
+p, ul, ol, dl, table, fieldset, blockquote, pre, code {
+margin-bottom:10px;
+}
+.check{
+	background-image: url(../images/checkmark_green.html);
+	background-repeat: no-repeat;
+	background-position: center center;
+	display:block;
+	width:22px;
+	height:22px;
+	margin:0 auto;
+}
+.cancel {
+	background-image: url(../images/cancel_red.html);
+	background-repeat: no-repeat;
+	background-position: center center;
+	display:block;
+	width:22px;
+	height:22px;
+	margin:0 auto;
+}
+
+hr {
+	border: 0 #ccc solid;
+	border-top-width: 1px;
+	clear: both;
+	height: 0;
+}
+hr {
+	border: 1px solid #eee;
+	width: 100%;
+	color: #eee;
+	height: 1px;
+}
+.hr{
+	width:100%;
+	display:block;
+	height:1px;
+	overflow:hidden;
+	opacity:.9;
+	border:none;
+	clear:both;
+	background-color:#eee;
+}
+
+.vspace {
+    clear: both;
+    display: block;
+    height: 30px;
+    width: 100%;
+}
+   p:empty { display: none }
+/*  Text elements
+----------------------------------------------------------------------------------------------------*/
+ul {
+	list-style: circle;
+	margin: 0 0 18px 18px;
+}
+ol {
+	list-style: decimal;
+	margin: 0 0 18px 18px;
+	clear:both;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+.line{
+	border-bottom:1px solid #ccc;
+	padding-bottom:10px;
+	margin-bottom:20px;
+}
+
+/* styled lists Styles/ fancy list style
+------------------------------------------------------*/
+
+dl {
+	margin: 0 0 24px 0;
+}
+dt {
+    float: left;
+    font-weight: bold;
+
+}
+.portfolio_aside dt {
+    width: 50%;
+}
+.portfolio_aside dd {
+	margin-bottom: 18px;
+	display: table;
+}
+dd {
+    display: inline-table;
+    text-align: left;
+}
+strong {
+	font-weight: bold;
+}
+cite,
+em,
+i {
+	font-style: italic;
+}
+big {
+	font-size: 131.25%;
+}
+ins {
+	background: #ffc;
+	text-decoration: none;
+}
+blockquote{
+	font-style: italic;
+	font-size:16px;
+	line-height:25px;
+	padding:0px 0px 20px 30px;
+	color:#777;
+	margin-top:10px;
+	margin-bottom:10px;
+	font-weight:normal;
+	background-image: url(../images/blockquote.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+blockquote.alignleft{
+	float:left;
+	width:250px;
+}
+blockquote.alignright{
+	float:right;
+	width:250px;
+}
+pre {
+	background: #f7f7f7;
+	color: #222;
+	line-height: 18px;
+	margin-bottom: 18px;
+	margin-top:10px;
+	padding: 1.5em;
+	white-space: pre-wrap;
+}
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+sup,
+sub {
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+input#s, input#searchsubmit{ }
+input#searchsubmit{ }
+input[type="text"],
+textarea,
+input
+ { 
+ border:1px solid #EEEEEE
+ }
+input[type="text"]:focus,
+textarea:focus,
+input:focus{ }
+/* Search Form 
+----------------------------------------------------------------------------------------------------
+#sidebar #search_form{
+ width: 300px;
+ display:table;
+}
+footer #search_form{
+ width: 220px;
+}
+
+
+#searchsubmit {
+    background: url("../images/search.png") no-repeat scroll center center #333333;
+    border: medium none;
+    display: block;
+    float: right;
+    height: 16px;
+    outline: medium none;
+    padding: 16px;
+    width: 16px;
+}
+#searchsubmit:hover {
+    -moz-transition: background-color 0.3s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s;
+	opacity:.7;
+	cursor:pointer;
+}
+input#s{
+  background-color:#999;
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    color: #666666;
+    padding: 7px;
+    width: 172px;
+	margin:0px;
+}
+#sidebar input#s{
+    width: 252px;
+} */
+/* imgage alignment
+----------------------------------------------------------------------------------------------------*/
+.img_circle{
+border-radius:100%;
+-webkit-border-radius:100%;
+}
+.border_radius_top{
+border_radius:5% 5% 0 0;
+-webkit-border-radius:5% 5% 0 0;
+}
+
+.border_radius_bottom{
+border_radius:0 0 5% 5%;
+-webkit-border-radius:0 0 5% 5%;
+}
+.border_radius_top_left_bottom_right{
+border_radius:5% 0 5% 0;
+-webkit-border-radius:5% 0 5% 0;
+}
+.border_radius_top_right_bottom_left{
+border_radius:0 5% 0 5%;
+-webkit-border-radius:0 5% 0 5%;
+}
+
+.border_large{
+    -moz-box-sizing: border-box;
+    border: 1px solid #dedede;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    max-width: 100%;
+    padding: 10px;
+}
+.border_medium, #gallery-1 img{
+    -moz-box-sizing: border-box;
+    border: 1px solid #dedede;
+     display: block;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    max-width: 100%;
+    padding: 7px;
+	margin-bottom:10px;
+}
+.border_small, #gallery-1 img{
+    -moz-box-sizing: border-box;
+    border: 1px solid #dedede;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    max-width: 100%;
+    padding: 4px;
+	margin-bottom:5px;
+}
+.alignright {
+	float: right;
+	margin: 0px 0 15px 20px;
+	width:auto;
+}
+.alignleft {
+	float: left;
+	margin:0px 20px 15px 0px;
+	width:auto;
+}
+.aligncenter {
+	display:block;
+	margin:0px auto;
+	width:auto;
+	margin:0px auto;
+}
+.alignnone {
+	width:auto!important;
+}
+a img {
+	border:none;
+}
+.wp-caption{
+
+}
+
+.wp-caption img {
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    margin: 0;
+}
+.wp-caption-text{}
+.gallery-caption {}
+a img {
+border:none;
+}

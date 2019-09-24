@@ -1,0 +1,33 @@
+<div class="admin-title">
+  <h1>
+    <img src="/assets/common/img/Users-icon.png" class="admin-title-img" /> Users
+  </h1>
+</div>
+
+<div class="admin-content">
+  <div class="row margin-top-10">
+    <div class="col-md-5">
+      <div class="input-group round-search">
+        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
+        <input type="text" class="form-control" id="searchInput" aria-describedby="basic-addon1" />
+      </div>
+    </div>
+    <div class="col-md-7 text-right">
+      <label *ngIf="pageInfo != null">{{pageInfo.start + 1}} - {{pageInfo.end}} of {{pageInfo.recordsTotal}} users</label>
+      <button id="approveButton" class="btn green btn-sm" style="margin-left: 30px">
+        Approve
+      </button>
+      <button id="dismissButton" class="btn btn-default btn-sm">
+        Dismiss
+      </button>
+      <button id="deleteButton" class="btn red btn-sm">
+        <i class="fa fa-trash-o"></i> Delete
+      </button>
+    </div>
+  </div>
+  <div class="portlet light" style="overflow: auto;">
+    <div class="portlet-body">
+      <table id="usersTable" class="display" style="width: 100%"></table>
+    </div>
+  </div>
+</div>

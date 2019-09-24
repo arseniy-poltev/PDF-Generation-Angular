@@ -1,0 +1,18 @@
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+  <div class="blog-page blog-content-1">
+    <div (click)="checkForm()"
+         class="doc-container blog-post-sm bordered blog-container mt-element-ribbon light portlet-fit">
+      <div class="blog-post-content">
+        <div class="md-checkbox">
+          <input type="checkbox" id="checkbox{{form.id}}" class="md-check" (change)="checkForm()"
+                 [checked]="form.checked" [disabled]="form.id == 1">
+          <label for="checkbox{{form.id}}">
+            <span></span>
+            <span class="check"></span>
+            <span class="box"></span>{{form.type}}</label>
+        </div>
+        <p class="blog-post-desc">{{form.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>

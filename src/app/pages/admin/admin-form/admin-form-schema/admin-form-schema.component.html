@@ -1,0 +1,261 @@
+<div class="admin-title">
+  <h1><img src="/assets/common/img/icons/draw.png" class="admin-title-img" /> Form Design</h1>
+</div>
+<div class="admin-content">
+  <div class="portlet light">
+    <div class="portlet-header">
+      <form class="form-horizontal">
+        <div class="form-body">
+          <div class="form-group">
+            <label class="control-label col-md-1">Type</label>
+            <div class="col-md-2">
+              <div id="formSelector"></div>
+            </div>
+            <label class="control-label col-md-1">Page</label>
+            <div class="col-md-2">
+              <div id="pageSelector"></div>
+            </div>
+            <div class="col-md-6 text-right">
+              <button id="saveButton" (click)="saveSchema()" class="btn green wide">Save</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="portlet-body">
+      <div class="row">
+        <div class="col-md-2">
+          <div id="schemaTree" style="overflow-x: auto !important"></div>
+        </div>
+        <div class="col-md-10">
+          <div id="previewContainer" class="form-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade bs-modal-lg" id="cellModal" tabindex="-1" role="basic" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+          <h4 class="modal-title">Edit Cell</h4>
+        </div>
+        <div class="modal-body">
+          <div class="tool-container">
+            <form class="form-horizontal">
+              <div class="form-body">
+                <div class="form-group">
+                  <label class="control-label col-md-2">Type</label>
+                  <div class="col-md-2">
+                    <select id="cellTypeSelector">
+                      <option value="div">div</option>
+                      <option value="table">table</option>
+                      <option value="tr">tr</option>
+                      <option value="td">td</option>
+                      <option value="input">input</option>
+                      <option value="textarea">textarea</option>
+                      <option value="radio">radio</option>
+                      <option value="checkbox">checkbox</option>
+                      <option value="select">select</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group" id="validationContainer" style="display: none">
+                  <label class="control-label col-md-2">Validation</label>
+                  <div class="col-md-2">
+                    <select id="validationTypeSelector">
+                      <option value="none">none</option>
+                      <!--<option value="date(mm/dd/yyyy)">date(mm/dd/yyyy)</option>
+                      <option value="date(mm/yyyy)">date(mm/yyyy)</option>-->
+                      <option value="date">date(mm/dd/yyyy)</option>
+                      <option value="date2">date(mm/yyyy)</option>
+                      <option value="phone">phone</option>
+                      <option value="email">email</option>
+                      <option value="A-Number">A-Number</option>
+                      <option value="number">number</option>
+                      <option value="000-00-0000">000-00-0000</option>
+                    </select>
+                  </div>
+                  <label class="control-label col-md-2">Label</label>
+                  <div class="col-md-4">
+                    <input id="validationLabelInput" class="form-control" />
+                  </div>
+                  <div class="col-md-2">
+                    <label class="mt-checkbox" style="margin-top: 8px">
+                      No Need
+                      <input id="validationNoNeedInput" type="checkbox" value="1" name="test" />
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">Class</label>
+                  <div class="col-md-10">
+                    <select id="classSelector">
+                      <option value="checkbox-group">checkbox-group</option>
+                      <option value="border-top">border-top</option>
+                      <option value="border-right">border-right</option>
+                      <option value="border-bottom">border-bottom</option>
+                      <option value="border-left">border-left</option>
+                      <option value="padding-0">padding-0</option>
+                      <option value="padding-3">padding-3</option>
+                      <option value="padding-5">padding-5</option>
+                      <option value="padding-10">padding-10</option>
+                      <option value="padding-15">padding-15</option>
+                      <option value="margin-top-5">margin-top-5</option>
+                      <option value="margin-top-10">margin-top-10</option>
+                      <option value="margin-bottom-0">margin-bottom-0</option>
+                      <option value="margin-bottom-2">margin-bottom-2</option>
+                      <option value="margin-bottom-5">margin-bottom-5</option>
+                      <option value="margin-bottom-10">margin-bottom-10</option>
+                      <option value="mt-radio-inline">mt-radio-inline</option>
+                      <option value="mt-radio-list">mt-radio-list</option>
+                      <option value="mt-checkbox-inline">mt-checkbox-inline</option>
+                      <option value="mt-checkbox-list">mt-checkbox-list</option>
+                      <option value="form-table">form-table</option>
+                      <option value="form-table-bordered">form-table-bordered</option>
+                      <option value="size-normal">size-normal</option>
+                      <option value="input-normal">input-normal</option>
+                      <option value="part-header">part-header</option>
+                      <option value="part-header-no-border">part-header-no-border</option>
+                      <option value="size-22">size-22</option>
+                      <option value="size-24">size-24</option>
+                      <option value="input-30">input-30</option>
+                      <option value="g28-size-normal">g28-size-normal</option>
+                      <option value="g28-input-large">g28-input-large</option>
+                      <option value="eoir33bia-size-22">eoir33bia-size-22</option>
+                      <option value="eoir33bia-size-24">eoir33bia-size-24</option>
+                      <option value="n400-size-normal">n400-size-normal</option>
+                      <option value="n400-part-header">n400-part-header</option>
+                      <option value="n400-input-35">n400-input-35</option>
+                      <option value="n400-part-italy">n400-part-italy</option>
+                      <option value="eoir42a-medium">eoir42a-medium</option>
+                      <option value="eoir42a-normal">eoir42a-normal</option>
+                      <option value="eoir42a-small">eoir42a-small</option>
+                      <option value="eoir42a-input-normal">eoir42a-input-normal</option>
+                      <option value="eoir42a-input-small">eoir42a-input-small</option>
+                      <option value="eoir42b-medium">eoir42b-medium</option>
+                      <option value="eoir42b-normal">eoir42b-normal</option>
+                      <option value="eoir42b-small">eoir42b-small</option>
+                      <option value="eoir42b-input-normal">eoir42b-input-normal</option>
+                      <option value="eoir42b-input-small">eoir42b-input-small</option>
+                      <option value="i485-input-medium">i485-input-medium</option>
+                      <option value="i485-small">i485-small</option>
+
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">Style</label>
+                  <div class="col-md-10">
+                    <input id="styleInput" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">Attributes</label>
+                  <div class="col-md-10">
+                    <input id="attributesInput" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group" style="display: none" id="keyContainer">
+                  <label class="control-label col-md-2">Key</label>
+                  <div class="col-md-10">
+                    <input id="keyInput" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group" style="display: none" id="foreignKeyContainer">
+                  <label class="control-label col-md-2">Foreign Key</label>
+                  <div class="col-md-10">
+                    <input id="foreignKeyInput" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group" style="display: none" id="PDFFieldKeyContainer">
+                  <label class="control-label col-md-2">PDF Field Key</label>
+                  <div class="col-md-10">
+                    <input id="PDFFieldKeyInput" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group" id="contentContainer">
+                  <label class="control-label col-md-2">Content</label>
+                  <div class="col-md-10">
+                    <textarea id="contentEditor" style="width: 100%; height: 300px"></textarea>
+                  </div>
+                </div>
+                <div class="form-group" style="display: none" id="structureContainer">
+                  <label class="control-label col-md-2">Structure</label>
+                  <div class="col-md-10">
+                    <textarea id="structureInput" rows="4" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div id="wizardButtonContainer" class="form-group" style="display: none">
+                  <div class="col-md-12">
+                    <button id="wizardButton" class="btn btn-sm pull-right"><i class="fa fa-object-ungroup"></i>
+                      Wizard Show/Hide
+                    </button>
+                  </div>
+                </div>
+                <div id="wizardToolsContainer" style="display: none">
+                  <div class="form-group">
+                    <label class="control-label col-md-2">Wizard</label>
+                    <div class="col-md-3">
+                      <div id="wizardSelector"></div>
+                    </div>
+                    <label class="control-label col-md-1">Section</label>
+                    <div class="col-md-6">
+                      <div id="wizardSectionSelector"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8">
+                      <label class="mt-checkbox" style="margin-top: 8px">
+                        New Row
+                        <input id="newRowInput" type="checkbox" value="1" name="test" />
+                        <span></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2">Group Label</label>
+                    <div class="col-md-10">
+                      <input id="groupLabelInput" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2">Label</label>
+                    <div class="col-md-10">
+                      <input id="labelInput" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2">Response Class</label>
+                    <div class="col-md-10">
+                      <input id="responseClassInput" class="form-control">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-md-12">
+              <button (click)="copyItem()" class="btn default btn-sm">Copy</button>
+              <button (click)="pasteItem()" class="btn default btn-sm" [class.disabled]="!copied">Paste</button>
+              <button (click)="addItem()" class="btn blue btn-sm">Add Child</button>
+              <button (click)="addItem('before')" class="btn blue btn-sm">Add Sibling</button>
+              <button (click)="removeItem()" class="btn red btn-sm">Remove</button>
+              <button (click)="updateItem()" class="btn green btn-sm pull-right">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+</div>

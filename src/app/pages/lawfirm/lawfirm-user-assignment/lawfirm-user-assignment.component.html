@@ -1,0 +1,48 @@
+<div class="page-container">
+  <div class="page-content-wrapper">
+    <div class="page-content">
+      <div class="container">
+        <div class="page-content-inner">
+          <div class="portlet light">
+            <div *ngIf="lawfirm" class="portlet-title">
+              <div class="caption font-dark-sunglo">
+                <img src="/assets/common/img/icons/lawers.png" class="img-icon" />&nbsp;
+                <span class="caption-subject bold uppercase">{{ lawfirm.name }} - Users</span>
+              </div>
+            </div>
+            <!-- BEGIN CONTENT -->
+            <!-- BEGIN PAGE CONTENT INNER -->
+            <div class="portlet-body form">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="portlet-body">
+                    <div class="row margin-bottom-20">
+                      <div class="col-md-7">
+                        <div class="text-left">
+                          <a id="detailButton" class="btn btn-default btn-sm disabled">
+                            <i class="fa fa-edit"></i> Detail
+                          </a>
+                          <a id="approveButton" class="btn green btn-sm disabled"><i class="fa fa-thumbs-o-up"></i> Approve</a>
+                          <a id="dismissButton" class="btn red btn-sm disabled"><i class="fa fa-thumbs-o-down"></i> Dismiss</a>
+                        </div>
+                      </div>
+                      <div class="col-md-5 text-right">
+                        <div class="input-group round-search" style="margin-right: -40px">
+                          <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
+                          <input type="text" class="form-control" id="searchInput" aria-describedby="basic-addon1" />
+                        </div>
+                      </div>
+                    </div>
+                    <table id="usersTable" class="display" style="width: 100%"></table>
+                  </div>
+                </div>
+              </div>
+              <!-- END PAGE CONTENT INNER -->
+            </div>
+            <!-- END CONTENT -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

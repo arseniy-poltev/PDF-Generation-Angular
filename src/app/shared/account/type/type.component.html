@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="portlet light bordered box-shadow">
+    <div class="portlet-title">
+      <div class="caption font-dark-sunglo">
+        <span class="caption-subject bold uppercase">Select account type</span>
+      </div>
+    </div>
+    <div class="portlet-body form">
+      <div class="type-box" (click)="gotoLawfirmSignup()">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="/assets/common/img/lawfirm.png" height="70px" />
+          </div>
+          <div class="col-sm-7">
+            <h4>Law Firm Sign Up</h4>
+          </div>
+          <div class="col-sm-2">
+            <i class="fa fa-long-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="type-box" (click)="gotoUserSignup()">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="/assets/common/img/lawyer.png" height="70px" />
+          </div>
+          <div class="col-sm-7">
+            <h4>User Sign Up</h4>
+          </div>
+          <div class="col-sm-2">
+            <i class="fa fa-long-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 30px">
+        <a [routerLink]="['/']" class="btn btn-default pull-left">Back</a>
+        <a [routerLink]="['/account/login']" class="btn btn-default pull-right">Login</a>
+      </div>
+    </div>
+  </div>
+</div>

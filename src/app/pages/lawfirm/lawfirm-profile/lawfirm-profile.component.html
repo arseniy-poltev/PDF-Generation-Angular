@@ -1,0 +1,108 @@
+<div class="page-container">
+  <div class="page-content-wrapper">
+    <div class="page-content">
+      <div class="container">
+        <div class="page-content-inner">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="portlet light">
+                <div class="portlet-title">
+                  <div class="caption font-dark-sunglo">
+                    <img src="/assets/common/img/icons/lawfirm.png" class="img-icon" />&nbsp;
+                    <span class="caption-subject bold uppercase">Law Firm Profile</span>
+                  </div>
+                </div>
+                <div class="portlet-body form">
+                  <form action="#" id="lawfirm_profile">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <!-- BEGIN FORM-->
+                        <div class="form-body">
+                          <div class="form-group">
+                            <label class="control-label">Law Firm Name</label>
+                            <input type="text" name="lawfirm_name" class="form-control" placeholder="Law Firm Name"
+                              [(ngModel)]="lawfirm.name" [ngModelOptions]="{standalone: true}">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">Country</label>
+                            <div id="countrySelector"></div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">State</label>
+                            <div id="stateSelector"></div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">City</label>
+                            <input type="text" name="lawfirm_city" class="form-control" placeholder=""
+                              [(ngModel)]="lawfirm.city" [ngModelOptions]="{standalone: true}" required>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">Street Number/Name</label>
+                            <input type="text" name="lawfirm_street" class="form-control" placeholder=""
+                              [(ngModel)]="lawfirm.street" [ngModelOptions]="{standalone: true}" required>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">Zip Code</label>
+                            <input type="text" name="lawfirm_zip" class="form-control" placeholder=""
+                              [(ngModel)]="lawfirm.zip_code" [ngModelOptions]="{standalone: true}" required>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">Postal Code</label>
+                            <input type="text" name="lawfirm_postal" class="form-control" placeholder=""
+                              [(ngModel)]="lawfirm.postal_code" [ngModelOptions]="{standalone: true}" required>
+                          </div>
+                          <div class="form-group">
+                            <table>
+                              <tr>
+                                <td>Apt.</td>
+                                <td>Ste.</td>
+                                <td>Flr.</td>
+                                <td>Number</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <label class="mt-checkbox mt-checkbox-outline">
+                                    <input type="checkbox" name="apartment" [checked]="lawfirm.apt_type == 'apartment'"
+                                      (change)="onAptTypeChanged($event, 'apartment')" />
+                                    <span></span>
+                                  </label>
+                                </td>
+                                <td>
+                                  <label class="mt-checkbox mt-checkbox-outline">
+                                    <input type="checkbox" name="suite" [checked]="lawfirm.apt_type == 'suite'"
+                                      (change)="onAptTypeChanged($event, 'suite')" />
+                                    <span></span>
+                                  </label>
+                                </td>
+                                <td>
+                                  <label class="mt-checkbox mt-checkbox-outline">
+                                    <input type="checkbox" name="floor" [checked]="lawfirm.apt_type == 'floor'"
+                                      (change)="onAptTypeChanged($event, 'floor')" />
+                                    <span></span>
+                                  </label>
+                                </td>
+                                <td>
+                                  <input class="form-control" type="text" placeholder="" name="apt_number"
+                                    [(ngModel)]="lawfirm.apt_number" [ngModelOptions]="{standalone: true}" required />
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div class="text-center margin-top-30">
+                            <button type="submit" class="btn green wide" (click)="onSubmit()">Update</button>
+                          </div>
+                        </div>
+                        <!-- END FORM-->
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

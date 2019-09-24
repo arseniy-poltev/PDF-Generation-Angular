@@ -1,0 +1,13 @@
+.logo {
+  margin-top: 0 !important;
+  padding: 30px;
+  padding-top: 50px;
+}
+
+.login {
+  background: url('/assets/common/img/auth.jpg');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

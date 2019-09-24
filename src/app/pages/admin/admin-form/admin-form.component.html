@@ -1,0 +1,100 @@
+<div class="admin-title">
+  <h1><img src="/assets/common/img/icons/design.svg" class="admin-title-img" /> Main Design</h1>
+</div>
+<div class="admin-content">
+  <div class="portlet light">
+    <div class="portlet-body">
+      <form class="form-horizontal">
+        <div class="form-body">
+          <div class="form-group">
+            <label class="control-label col-md-1">Type</label>
+            <div class="col-md-2">
+              <app-dropdownlist [items]="types" (onSelected)="typeSelected($event)" [value]="type"></app-dropdownlist>
+            </div>
+            <div class="col-md-9">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-1">Name</label>
+            <div class="col-md-11">
+              <input class="form-control" id="nameInput" name="name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-1">Description</label>
+            <div class="col-md-11">
+              <textarea name="description" class="form-control" rows="2" autocomplete="on" id="descriptionInput"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-1">Header</label>
+            <div class="col-md-11">
+              <div id="headerEditor"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-1">Footer</label>
+            <div class="col-md-11">
+              <div id="footerEditor"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-1"></label>
+            <div class="col-md-11">
+              <div class="text-center">
+                <app-pagination [pagination]="pagination" (onPageSelected)="pageSelected($event)"></app-pagination>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-11">
+              <div class="text-center margin-bottom-10">
+                <button (click)="addPage()" type="button" class="btn green btn-sm">Add Page</button>
+                <button (click)="removePage()" type="button" class="btn red btn-sm">Remove Page</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-1">Wizards</label>
+            <div class="col-md-5">
+              <div class="row margin-bottom-10">
+                <div class="col-xs-12">
+                  <input id="wizardNameInput" class="form-control input-sm" style="margin-top: 0">
+                </div>
+                <div class="col-xs-12 text-center">
+                  <div class="btn-group margin-top-10">
+                    <button (click)="addWizard()" class="btn btn-sm btn-default">Add</button>
+                    <button (click)="updateWizard()" class="btn btn-sm btn-default">Update</button>
+                    <button (click)="removeWizard()" class="btn btn-sm btn-default">Remove</button>
+                  </div>
+                </div>
+              </div>
+              <div id="wizardList"></div>
+            </div>
+            <label class="control-label col-md-1">Sections</label>
+            <div class="col-md-5">
+              <div class="row margin-bottom-10">
+                <div class="col-xs-12">
+                  <input id="sectionNameInput" class="form-control input-sm" style="margin-top: 0">
+                </div>
+                <div class="col-xs-12 text-center">
+                  <div class="btn-group margin-top-10">
+                    <button (click)="addSection()" class="btn btn-sm btn-default">Add</button>
+                    <button (click)="updateSection()" class="btn btn-sm btn-default">Update</button>
+                    <button (click)="removeSection()" class="btn btn-sm btn-default">Remove</button>
+                  </div>
+                </div>
+              </div>
+              <div id="wizardSectionsList"></div>
+            </div>
+          </div>
+        </div>
+        <div class="form-actions margin-top-30 margin-bottom-10">
+          <div class="text-center">
+            <button (click)="updateForm()" type="button" class="btn green wide">Save</button>
+            <a [routerLink]="['/admin/form/schema']" type="button" class="btn btn-default wide">Next</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

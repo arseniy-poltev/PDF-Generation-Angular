@@ -1,0 +1,75 @@
+<footer class='footer'>
+  <div class="footer-container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <span class="section-title">Features</span>
+        <ul class="footer-links">
+          <li><a [routerLink]="['/pages/dashboard']">Product Overview</a></li>
+          <li><a [routerLink]="['/pages/client/create']">Create New Client</a></li>
+          <li><a [routerLink]="['/pages/client/reactivation']">Client Reactivation</a></li>
+          <li><a [routerLink]="['/pages/lawfirm/profile']">Law Firm Profile</a></li>
+          <li><a [routerLink]="['/pages/lawfirm/user_assignment']">Law Firm User Assignment</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <span class="section-title">Support</span>
+        <ul class="footer-links">
+          <li><a [routerLink]="['/pages/contact_us']">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <span class="section-title">About</span>
+        <ul class="footer-links">
+          <li><a [routerLink]="['/pages/about']" target="_blank">Our Company</a></li>
+          <li><a [routerLink]="['/pages/contact_us']">Contact Us</a></li>
+        </ul>
+
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="contact footer-section">
+          <span class="question">Questions or comments?</span>
+          <br>
+          <span class="answer">Call (800) 571-8062 or <a [routerLink]="['/pages/contact_us']">email us</a></span>
+        </div>
+        <ul class="social footer-section">
+          <li class='twitter'>
+            <a href='https://twitter.com/ezdocproinc' target='_blank'>
+              <tr>
+                <td><img class="social-icon" src="../../../../assets/common/img/social/TWITTER-HOVER.PNG"/></td>
+                <td class="social-title"><span>Follow us on Twitteimg</span></td>
+              </tr>
+            </a>
+          </li>
+          <li class='facebook'>
+            <a href='https://www.facebook.com/ezdocpro' target='_blank'>
+              <tr>
+                <td><img class="social-icon" src="../../../../assets/common/img/social/FACEBOOK-HOVER.PNG"/></td>
+                <td class="social-title"><span>Become a fan on Facebook</span></td>
+              </tr>
+            </a>
+          </li>
+          <li class='googleplus'>
+            <a href='https://plus.google.com/+ezdocproInc' target='_blank'>
+              <tr>
+                <td><img class="social-icon" src="../../../../assets/common/img/social/GOOGLE.PNG"/></td>
+                <td class="social-title"><span>Find us on Google</span></td>
+              </tr>
+            </a>
+          </li>
+        </ul>
+        <div class="footer-section">
+          <img class="footer-logo" src="../../../../assets/common/img/logo-blue.png">
+        </div>
+      </div>
+    </div>
+    <div class="row margin-top-20">
+      <div class="col-md-12">
+        <div class="center">&copy;2018 EzDocPro. All rights reserved</div>
+      </div>
+    </div>
+  </div>
+  <app-confirm-window></app-confirm-window>
+</footer>

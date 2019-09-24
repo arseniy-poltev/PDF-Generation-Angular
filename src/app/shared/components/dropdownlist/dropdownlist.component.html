@@ -1,0 +1,3 @@
+<select *ngIf="items" class="bs-select form-control" (change)="selectItem($event)">
+  <option *ngFor="let item of items" value="{{ item.value }}" [selected]="item.value == value.value">{{ item.label }}</option>
+</select>

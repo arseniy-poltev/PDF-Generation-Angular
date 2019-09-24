@@ -1,0 +1,52 @@
+<div class="page-container">
+  <!-- BEGIN CONTENT -->
+  <div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <!-- BEGIN PAGE CONTENT BODY -->
+    <div class="page-content">
+      <div class="inner">
+        <!-- BEGIN PAGE CONTENT INNER -->
+        <div class="page-content-inner">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- BEGIN EXAMPLE TABLE PORTLET-->
+              <div class="portlet light">
+                <div class="portlet-title">
+                  <div class="caption font-dark-sunglo">
+                    <img src="/assets/common/img/icons/doc.png" class="img-icon" />&nbsp;
+                    <span class="caption-subject bold uppercase" *ngIf="client != null">
+                      {{ client.first_name }} {{ client.last_name }}<span *ngIf="form_type != null">, {{form_type}}</span>
+                    </span>
+                  </div>
+                  <div class="inputs">
+                    <div class="portlet-input ">
+                      <div class="pull-right">
+                        <button class="btn btn-default" (click)="showList()">
+                          <i class="icon-docs"></i> Forms
+                        </button>
+                        <a id="savePDFButton" class="btn red" (click)="print()">
+                          <i class="fa fa-file-pdf-o"></i> Save as PDF
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portlet-body form">
+                  <div id="formPreviewContainer" class="preview-form"></div>
+                  <div style="display: none">
+                    <app-form-print [form_id]="form_id" [client_id]="client_id"></app-form-print>
+                  </div>
+                </div>
+              </div>
+              <!-- END EXAMPLE TABLE PORTLET-->
+            </div>
+          </div>
+        </div>
+        <!-- END PAGE CONTENT INNER -->
+      </div>
+    </div>
+    <!-- END PAGE CONTENT BODY -->
+    <!-- END CONTENT BODY -->
+  </div>
+  <!-- END CONTENT -->
+</div>

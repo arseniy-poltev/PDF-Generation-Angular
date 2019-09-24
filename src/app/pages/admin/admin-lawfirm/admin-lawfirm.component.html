@@ -1,0 +1,108 @@
+<div class="admin-title">
+  <h1><img src="/assets/common/img/icons/lawfirm.png" class="admin-title-img" /> Lawfirms</h1>
+</div>
+
+<div class="admin-content">
+  <div class="row">
+    <div class="col-md-4">
+      <label>{{ count }} Lawfirms</label>
+      <div id="lawfirmList"></div>
+    </div>
+    <div class="col-md-8">
+      <div class="portlet light" style="margin-top: 25px">
+        <div class="portlet-body form">
+          <form role="form">
+            <div class="form-body" style="padding-top: 0">
+              <div class="form-group">
+                <label class="control-label">Country</label>
+                <div id="countrySelector"></div>
+              </div>
+              <div class="form-group">
+                <label class="control-label">State</label>
+                <div id="stateSelector"></div>
+              </div>
+              <div class="form-group">
+                <label class="control-label">Province</label>
+                <input type="text" name="province" class="form-control" placeholder="" [(ngModel)]="lawfirm.province"
+                  [ngModelOptions]="{standalone: true}" required>
+              </div>
+              <div class="form-group">
+                <label class="control-label">City</label>
+                <input type="text" name="city" class="form-control" placeholder="" [(ngModel)]="lawfirm.city"
+                  [ngModelOptions]="{standalone: true}" required>
+              </div>
+              <div class="form-group">
+                <label class="control-label">Street Number/Name</label>
+                <input type="text" name="street" class="form-control" placeholder="" [(ngModel)]="lawfirm.street"
+                  [ngModelOptions]="{standalone: true}" required>
+              </div>
+              <div class="form-group margin-top-20">
+                <table>
+                  <tr>
+                    <td>Apt.</td>
+                    <td>Ste.</td>
+                    <td>Flr.</td>
+                    <td>Number</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="mt-checkbox mt-checkbox-outline">
+                        <input type="checkbox" name="apartment" [checked]="lawfirm.apt_type == 'apartment'"
+                          (change)="onAptTypeChanged($event, 'apartment')" />
+                        <span></span>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="mt-checkbox mt-checkbox-outline">
+                        <input type="checkbox" name="suite" [checked]="lawfirm.apt_type == 'suite'"
+                          (change)="onAptTypeChanged($event, 'suite')" />
+                        <span></span>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="mt-checkbox mt-checkbox-outline">
+                        <input type="checkbox" name="floor" [checked]="lawfirm.apt_type == 'floor'"
+                          (change)="onAptTypeChanged($event, 'floor')" />
+                        <span></span>
+                      </label>
+                    </td>
+                    <td>
+                      <input class="form-control" type="text" placeholder="" name="apt_number"
+                        [(ngModel)]="lawfirm.apt_number" [ngModelOptions]="{standalone: true}" required />
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="form-group">
+                <label class="control-label">Law Firm Name</label>
+                <input type="text" name="name" class="form-control" placeholder="" [(ngModel)]="lawfirm.name"
+                  [ngModelOptions]="{standalone: true}" required>
+              </div>
+              <div class="form-group">
+                <label class="control-label">Zip Code</label>
+                <input type="text" name="zip_code" class="form-control" placeholder="" [(ngModel)]="lawfirm.zip_code"
+                  [ngModelOptions]="{standalone: true}" required>
+              </div>
+              <div class="form-group">
+                <label class="control-label">Postal Code</label>
+                <input type="text" name="postal_code" class="form-control" placeholder=""
+                  [(ngModel)]="lawfirm.postal_code" [ngModelOptions]="{standalone: true}" required>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6">
+                <button (click)="updateLawfirm()" class="btn green">Update</button>
+              </div>
+              <div class="col-sm-6">
+                <div class="pull-right">
+                  <button (click)="deleteLawfirm()" class="btn red">Delete</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

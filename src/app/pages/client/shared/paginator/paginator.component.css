@@ -1,0 +1,7 @@
+#pageInput {
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: text;
+  text-wrap: none;
+  height: 34px;
+}

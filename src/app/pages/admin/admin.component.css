@@ -1,0 +1,38 @@
+.navbar {
+  border-radius: 0px !important;
+  margin-bottom: 0px;
+  background-image: linear-gradient(141deg, #0f1215 25%, #283546 100%);
+  border: none !important;
+  padding: 2px 0;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #cdcdcd;
+}
+
+.navbar-inverse .navbar-nav>li:hover>a {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav>li.active>a {
+  color: white;
+}
+
+.navbar-brand img {
+  margin-top: -10px
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background-image: linear-gradient(141deg, #394e68 25%, #1f2d3c 100%);
+  color: white;
+}
+
+.dropdown > .dropdown-menu:before, .dropdown > .dropdown-menu:after {
+  content: initial;
+}
+
+.dropdown > .dropdown-menu li a:hover {
+  color: #656565;
+}

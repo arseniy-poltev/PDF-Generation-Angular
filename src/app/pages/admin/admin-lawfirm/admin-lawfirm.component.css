@@ -1,0 +1,11 @@
+.portlet-body {
+  padding: 10px;
+}
+
+.form-actions {
+  padding: 10px;
+}
+
+.portlet>.portlet-title>.caption {
+  font-size: 12px;
+}

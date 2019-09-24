@@ -1,0 +1,71 @@
+/* Read More Buttons
+----------------------------------------------------------------------------------------------------*/
+/* General button style (reset) */
+.mask .readmore{
+float: none !important;
+margin:0px auto;
+}
+.promobox .readmore-1a:hover,
+.promobox .readmore-1a:active,
+.porfolio_items .readmore-1a:hover,
+.porfolio_items .readmore-1a:active
+ {
+background-color:#fff!important;
+color:#333!important;
+border: 3px solid #FFFFFF!important;
+}
+.promobox .readmore, .porfolio_items .readmore  {
+color:#fff;
+border-radius:3px;
+border: 3px solid #FFFFFF!important;
+}
+.rolling_text .readmore{
+	margin:0px auto;
+} 
+.readmore {
+  cursor: pointer;
+    letter-spacing: 1px;
+    line-height: 21px;
+    outline: medium none;
+    padding: 5px 15px;
+    position: relative;
+	border: 3px solid #FB4400;
+    transition: all 0.3s ease 0s;
+	font-size:13px;
+	border-radius: 3px 
+}
+.readmore:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+/* Button 1 */
+.readmore-1 {
+	border: 3px solid #fb4400;
+	color: #333;
+	text-decoration:none;
+	display: table;
+    margin-top: 10px;
+}
+
+/* Button 1a */
+.readmore-1a:hover,
+a.readmore:hover,
+a.readmore:active,
+.readmore-1a:active {
+	color: #fff;
+	background-color: #fb4400;
+	text-decoration:none;
+	border: 3px solid #fb4400;
+}
+.Portfolio_gallery .readmore{
+	float:right;
+	border: 3px solid #fb4400;
+}
+.services .readmore{
+	display:table!important;
+	color: #fff!important;
+}

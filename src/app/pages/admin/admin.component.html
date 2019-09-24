@@ -1,0 +1,41 @@
+<div class="page-wrapper">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" [routerLink]="['/admin/user']">
+          <img src="../../../assets/common/img/logo-admin.png" height="40">
+        </a>
+      </div>
+      <ul *ngIf="pages" class="nav navbar-nav">
+        <li *ngFor="let page of pages" [ngClass]="page.active" [class.dropdown]="page.children">
+          <a *ngIf="!page.children" (click)="navigate(page.path)">
+            {{ page.title }}
+          </a>
+          <a *ngIf="page.children" class="dropdown-toggle" data-toggle="dropdown">
+            {{ page.title }}
+            <span class="caret"></span>
+          </a>
+          <ul *ngIf="page.children" class="dropdown-menu">
+            <li *ngFor="let child of page.children" [ngClass]="child.active">
+              <a (click)="navigate(child.path)">{{ child.title }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a [routerLink]="['/']"><i class="fa fa-external-link"></i> Home</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- BEGIN PAGE CONTENT BODY -->
+  <div class="page-wrapper-row">
+    <div class="page-wrapper-middle">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!-- END PAGE CONTENT BODY -->
+  <footer>
+    @ 2018 EzDocPro
+  </footer>
+  <app-confirm-window></app-confirm-window>
+</div>

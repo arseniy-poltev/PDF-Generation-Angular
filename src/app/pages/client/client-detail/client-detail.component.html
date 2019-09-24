@@ -1,0 +1,70 @@
+<div class="page-container">
+  <!-- BEGIN CONTENT -->
+  <div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <!-- BEGIN PAGE CONTENT BODY -->
+    <div class="page-content">
+      <div class="inner">
+        <!-- BEGIN PAGE CONTENT INNER -->
+        <div class="page-content-inner">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- BEGIN EXAMPLE TABLE PORTLET-->
+              <div class="portlet light">
+                <div class="portlet-title">
+                  <div class="caption font-dark-sunglo">
+                    <img src="/assets/common/img/icons/edit.png" class="img-icon" />&nbsp;
+                    <span class="caption-subject bold uppercase" *ngIf="client != null && form_wizard == '1'">
+                      Client Details
+                    </span>
+                    <span class="caption-subject bold uppercase" *ngIf="client != null && form_wizard == '0'">
+                      {{ client.first_name }} {{ client.last_name }}<span *ngIf="form != null">, {{form.type}}</span>
+                    </span>
+                  </div>
+                  <div class="inputs">
+                    <div class="portlet-input">
+                      <div class="pull-right">
+                        <button class="btn btn-default" (click)="showList()">
+                          <i class="icon-docs"></i> Forms
+                        </button>
+                        <button *ngIf="!form_wizard" class="btn red" (click)="print()">
+                          <i class="fa fa-file-pdf-o"></i> Save as PDF
+                        </button>
+                        <button *ngIf="!form_wizard" class="btn green" (click)="submitDoc()">
+                          <i class="fa fa-save"></i> Save
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portlet-body">
+                  <div style="display: none">
+                    <app-form-print [form_id]="form_id" [client_id]="client_id"></app-form-print>
+                  </div>
+                  <div class="margin-bottom-20">
+                    <app-form-doc [client_id]="client_id" [form_id]="form_id" [page_index]="currentPage"></app-form-doc>
+                    <div *ngIf="form_wizard" class="text-center" style="margin: 25px 10px -10px 10px">
+                      <button class="btn green wide" (click)="submitDoc()">Save</button>
+                    </div>
+                  </div>
+                  <div class="row doc-page-controls" style="display: none">
+                    <div class="col-md-12">
+                      <div class="text-center">
+                        <app-paginator (onPageSelected)="pageSelected($event)"></app-paginator>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END EXAMPLE TABLE PORTLET-->
+            </div>
+          </div>
+        </div>
+        <!-- END PAGE CONTENT INNER -->
+      </div>
+    </div>
+    <!-- END PAGE CONTENT BODY -->
+    <!-- END CONTENT BODY -->
+  </div>
+  <!-- END CONTENT -->
+</div>

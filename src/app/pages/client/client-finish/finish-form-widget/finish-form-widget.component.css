@@ -1,0 +1,24 @@
+.doc-ribbon {
+  height : 200px;
+  box-shadow: -2px 2px 7px rgba(0,0,0,.4);
+  background: #fafafa;
+}
+
+.not-completed-doc {
+  height: 170px;
+}
+
+.md-checkbox {
+  margin: 15px;
+}
+
+.ribbon-content {
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.ribbon-action-buttons {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}

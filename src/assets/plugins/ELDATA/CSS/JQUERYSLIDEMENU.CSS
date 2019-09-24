@@ -1,0 +1,231 @@
+nav select{
+display:none;
+}
+nav {
+    z-index: 99;
+	float:left;
+}
+.menu select{	
+	display:none;
+}
+ul.menu{
+float:left;
+list-style:none;
+padding-right:25px;
+}
+ul.menu > li > ul{
+margin-top:0px;
+border-top: 3px solid #FB4400;
+
+}
+.menu ul li:hover > ul {
+	display: block;
+}
+.menu ul {
+	list-style: none;
+	position: relative;
+	margin:0px;
+	z-index:99;    
+}
+.menu ul:after {
+	content: "";
+	clear: both; 
+	display: block;
+}
+.menu > ul  > li {
+	float: left;
+	position:relative;
+	 padding-left: 13px;
+	padding-bottom:42px; 
+}
+.menu > ul > li > a {
+	display: block; 
+	padding:15px 20px;
+	color: #333; 
+	text-decoration: none;
+    text-transform: uppercase;
+}
+.menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width:200px;
+	box-shadow:0 2px 4px rgba(0, 0, 0, 0.3);
+	}
+.menu ul ul li {
+	float: none; 
+	 position: relative;
+	 border-bottom:1px solid #eee; 
+}
+.menu ul ul li a {
+    color: #333;
+    display: block;
+    padding: 8px 20px;
+    text-align: left;
+	font-size:13px;
+	background-color:#fff;
+	
+}	
+.menu ul ul li a:hover {
+	color:#7bc0a1 ;
+	
+	
+}
+.menu ul ul ul {
+	position: absolute; 
+	left: 100%; 
+	top:0;
+	width:140px;
+}
+.menu ul > li.main-links:last-child a{
+border-right:0px!important;
+}
+.menu > ul > li:last-child  > a{
+border-right:none!important;
+}
+.menu ul  li:first-child  > a{
+border-left:0px!important;
+}
+.menu ul  li ul li:last-child , .menu ul  li ul li ul li:last-child {
+border-bottom:none!important;
+background-color:#ccc;
+}
+.menu > li.current-menu-item > a, .menu > li.current_page_item > a, .menu > ul  > li:hover > a
+{
+color:#F75454 ;
+}
+
+ul.sub-menu .current_page_item a{
+color:#F75454 ;
+}
+
+.menu .current_page_ancestor  > a, .menu .current-menu-ancestor > a, .menu .current-menu-item  > a{
+	color:#F75454;
+}
+/*menu style*/
+
+nav a {
+	position: relative;
+	display: inline-block;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+.sticky_header_style .menu > ul > li{
+	padding-bottom:26px
+}
+
+
+/* Effect 7: second border slides up */
+.cl-effect-7> ul> li > a{
+    color: #000000;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 10px 12px 7px;
+    text-shadow: none;;
+}
+.cl-effect-7 > ul> li > a:hover {
+	color: #7bc0a1;
+   
+}
+
+.cl-effect-7  a.active {
+	color: #7bc0a1;
+   
+   }
+.cl-effect-7  > ul> li > a::before,
+.cl-effect-7 > ul> li > a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #eee;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: scale(0.85);
+	-moz-transform: scale(0.85);
+	transform: scale(0.85);
+	margin-top: 0px;
+}
+
+
+.cl-effect-7   > ul> li > a::after {
+	opacity: 0;
+	-webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+	transition: top 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.cl-effect-7 > ul> li > a:hover::before,
+.cl-effect-7 > ul> li > a:hover::after,
+.cl-effect-7 > ul> li > a:focus::before,
+.cl-effect-7  > ul> li > a:focus::after {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+
+}
+
+.cl-effect-7 > ul> li > a:hover::after,
+.cl-effect-7 > ul> li > a:focus::after {
+	top: 0%;
+	opacity: 1;
+}
+.color-8{
+top:45px;
+position:relative;
+}
+.cl-effect-7 menu ul ul{
+border-bottom:none;
+}
+/* Sticky Header */
+.sticky_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	z-index: 10000;
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	transition: height 0.3s;
+	height:120px;
+}
+
+.sticky_header h1 {
+	text-transform: uppercase;
+	color: #333;
+	letter-spacing: 4px;
+	max-width:100%;
+	margin: 0;
+	float: left;
+}
+/* Transitions and class for reduced height */
+.sticky_header h1,
+.sticky_header nav a {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.sticky_header.sticky_header_style {
+	height: 90px;
+}
+.sticky_header.sticky_header_style h1 img {
+	max-width:70%;
+}
+.sticky_header_style .header_right_section{
+	padding-top: 14px;
+}
+.sticky_header_style h1#logo{
+	 padding: 32px 0;
+}
+/* Example Media Queries */
